@@ -2,11 +2,11 @@
 100 Day Challenge Web Dev
 
 # Back to Basic
-2024-01-18 ~
+2024-01-19 ~
 
 ---
 
 #### 1 Day
-Web Dev Intro 2024-01-18
+Web Dev Intro 2024-01-19
 - What is Web
 - "Hello World"
