@@ -1,5 +1,14 @@
 h1 {
   font-family: sans-seri;
   text-align: center;
-  color: tomato;
+  color: rgb(83, 75, 75);
+}
+
+p {
+  font-family: sans-serif;
+  text-align: center;
+  color: rgb(83, 75, 75);
+}
+
+a {
 }
