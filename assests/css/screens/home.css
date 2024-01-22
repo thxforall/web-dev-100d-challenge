@@ -1,0 +1,18 @@
+.trophy {
+  width: 14rem;
+  height: 14rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.home-title {
+  font-size: 45px;
+  margin-bottom: 3rem;
+}
+
+.todays-challenge {
+  color: var(--highlight-color);
+  font-weight: bold;
+  font-size: 50px;
+  margin-bottom: 2rem;
+}
