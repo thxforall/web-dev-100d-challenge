@@ -29,3 +29,11 @@ Css & Html Structure 2024-01-21
 - Html Basic Structure
 - Css style
 - VSC Emmet
+
+#### 4 Day
+
+Css pseudo, id, px 2024-01-22
+
+- Pseudo selector
+- Css ID#
+- Css px
