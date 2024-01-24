@@ -51,3 +51,10 @@ Deep into Html & Css proprety 2024-01-24
 - Html structure
 - Css Property
 - Cascading
+
+#### 7 Day
+
+Css Box 2024-01-25
+
+- Css Box & Inline
+- Css Class
