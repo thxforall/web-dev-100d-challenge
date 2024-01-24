@@ -43,3 +43,11 @@ Css pseudo, id, px 2024-01-22
 1st Work 2024-01-23
 
 - Basic section ⭕️
+  
+#### 6 Day
+
+Module, Css proprety 2024-01-24
+
+- Module
+- Css Property
+- Cascading
