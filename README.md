@@ -46,8 +46,7 @@ Css pseudo, id, px 2024-01-22
   
 #### 6 Day
 
-Module, Css proprety 2024-01-24
+Deep into Html & Css proprety 2024-01-24
 
-- Module
 - Css Property
 - Cascading
