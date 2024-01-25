@@ -1,18 +1,47 @@
+.main-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50rem;
+  height: 30rem;
+  border: 2px solid var(--text-color);
+  border-radius: 8px;
+  background-color: var(--shading);
+}
+
 .trophy {
+  position: absolute;
+  top: 70px;
   width: 14rem;
   height: 14rem;
   border-radius: 50%;
-  margin-bottom: 1rem;
+  border: 5px solid var(--background-color);
 }
 
 .home-title {
-  font-size: 45px;
-  margin-bottom: 3rem;
+  font-size: 30px;
+  margin: 3rem 0 3rem 0;
+}
+
+.home-title strong {
+  color: var(--tertiary);
+  font-size: 34px;
 }
 
 .todays-challenge {
   color: var(--highlight-color);
   font-weight: bold;
   font-size: 50px;
-  margin-bottom: 2rem;
+}
+
+.home-footer {
+  margin-top: 3rem;
 }

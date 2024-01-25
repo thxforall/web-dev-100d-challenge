@@ -56,5 +56,13 @@ Deep into Html & Css proprety 2024-01-24
 
 Css Box 2024-01-25
 
-- Css Box & Inline
+- Css inline & block
 - Css Class
+
+#### 8 Day
+
+Css margin 2024-01-26
+
+- Css inline & block detail
+- margin-collapsing
+- 2 Chapter Finish 😍
