@@ -5,18 +5,22 @@
     <link rel="stylesheet" href="assests/css/style.css" />
     <title>HTML & CSS Basics Summary</title>
   </head>
-  <body>
-    <header>
+  <body class="summary-body">
+    <header class="summary-header">
       <h1>HTML & CSS Bascis Summary</h1>
+      <img
+        src="/assests/images/html-css.png"
+        alt="HTML & CSS"
+        class="html-css-img"
+      />
     </header>
-    <img src="/assests/images/html-css.png" alt="HTML & CSS" />
-    <main>
-      <section>
+    <main class="summary-main">
+      <section class="html-section">
         <h2>HTML Summary</h2>
         <p>
           HTML (HyperText Markup Language) is used to define our page content,
-          structure and meaning. You don't use it for styling purpose. Use CSS
-          for that instead!
+          structure and meaning. You <strong class="dont">don't</strong> use it
+          for styling purpose. Use CSS for that instead!
         </p>
         <ol>
           <li>HTML uses "elements" to describe (annotate) content</li>
@@ -33,10 +37,14 @@
         </ol>
         <p>
           Learn more about all available HTML elements on
-          <strong>the MDN HTML element reference</strong>
+          <strong>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">
+              the MDN HTML element reference
+            </a></strong
+          >
         </p>
       </section>
-      <section>
+      <section class="css-section">
         <h2>CSS Summary</h2>
         <p>
           CSS (Cascading style Sheets) is used for styling our page content.
@@ -58,16 +66,18 @@
           </li>
         </ol>
         <p>
-          There's a long list of available elements but you'll gain experience
-          over time, no worries.
-        </p>
-        <p>
           Learn more about all available CSS properties and values on
-          <strong>the MDN CSS property reference</strong>
+          <strong>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference"
+            >
+              the MDN CSS property reference
+            </a></strong
+          >
         </p>
       </section>
     </main>
-    <footer>
+    <footer class="summary-footer">
       <a href="assests/html-css-basics-summary.pdf">
         <button type="button">Download PDF Summary</button>
       </a>
