@@ -67,9 +67,9 @@ Css margin 2024-01-26
 - margin-collapsing
 - 2 Chapter Finish 😍
 
-#### 9 Day
+#### 9~10 Day
 
-HTML & CSS Basics 2024-01-27
+HTML & CSS Basics 2024-01-27 ~ 2024-01-28
 
 - 3 Chaper Start 💪
-- Basics Summary
+- Basics Summary Practice
