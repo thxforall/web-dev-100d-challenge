@@ -12,6 +12,7 @@
 /* Screens */
 @import '../css/screens/home.css';
 @import '../css/screens/full-week.css';
+@import '../css/screens/summary.css';
 
 body {
   background-color: var(--background-color);
