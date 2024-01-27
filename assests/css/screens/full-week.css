@@ -13,12 +13,11 @@
   border-radius: 5px;
 }
 
-button:hover {
-  cursor: pointer;
+.today-button:hover {
   font-size: 21px;
 }
 
-ol {
+.goal-ol {
   color: var(--highlight-color);
   width: 500px;
   margin: 2rem auto 0 auto;
