@@ -66,3 +66,10 @@ Css margin 2024-01-26
 - Css inline & block detail
 - margin-collapsing
 - 2 Chapter Finish 😍
+
+#### 9 Day
+
+HTML & CSS Basics 2024-01-27
+
+- 3 Chaper Start 💪
+- Basics Summary
