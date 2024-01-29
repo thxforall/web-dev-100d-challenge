@@ -78,12 +78,13 @@ HTML & CSS Basics 2024-01-27 ~ 2024-01-28
 
 Hosting and Online 2024-01-29
 
-- 4 Chaper Start 💪
 - Hosting, Deployment
 - Netlify deploy
+-
 
 #### 12 Day
 
 2024-01-30
 
--
+- git z Shell, cmd
+- git & git hub
