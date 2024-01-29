@@ -73,3 +73,17 @@ HTML & CSS Basics 2024-01-27 ~ 2024-01-28
 
 - 3 Chaper Start 💪
 - Basics Summary Practice
+
+#### 11 Day
+
+Hosting and Online 2024-01-29
+
+- 4 Chaper Start 💪
+- Hosting, Deployment
+- Netlify deploy
+
+#### 12 Day
+
+2024-01-30
+
+-
