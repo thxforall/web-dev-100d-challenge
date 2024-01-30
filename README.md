@@ -80,11 +80,10 @@ Hosting and Online 2024-01-29
 
 - Hosting, Deployment
 - Netlify deploy
--
 
 #### 12 Day
 
-2024-01-30
+Git 2024-01-30
 
 - git z Shell, cmd
 - git & git hub
