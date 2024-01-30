@@ -86,4 +86,5 @@ Hosting and Online 2024-01-29
 Git 2024-01-30
 
 - git z Shell, cmd
+- terminal
 - git & git hub
