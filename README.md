@@ -81,9 +81,9 @@ Hosting and Online 2024-01-29
 - Hosting, Deployment
 - Netlify deploy
 
-#### 12~13 Day
+#### 12~14 Day
 
-Git 2024-01-30 ~ 2024-01-31
+Git 2024-01-30 ~ 2024-02-01
 
 - git z Shell, cmd
 - terminal
