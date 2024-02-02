@@ -91,9 +91,15 @@ Git 2024-01-30 ~ 2024-02-01
 - branch, merge
 - git clone, fork
 
-#### 15 Day
+### 15 Day
 
-Project Start 2024-02-02
+Layout & Positioning 2024-02-02
 
 - Project Start
 - Flex box
+
+### 16 Day
+
+Flex Box 2024-02-03
+
+-
