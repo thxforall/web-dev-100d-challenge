@@ -109,3 +109,10 @@ Flex Box 2024-02-03
 Flex Box 2024-02-04
 
 - Css practice
+
+### 18 Day
+
+Flex Box 2024-02-05
+
+- Css px,rem
+- position
