@@ -100,21 +100,29 @@ Layout & Positioning 2024-02-02
 
 ### 16 Day
 
-Flex Box 2024-02-03
+Header 2024-02-03
 
 - Css practice
 - postion
 
 ### 17 Day
 
-Flex Box 2024-02-04
+Main, Section 2024-02-04
 
 - unit
--
+- section part
 
 ### 18 Day
 
-Flex Box 2024-02-05
+Footer 2024-02-05
 
-- Css px,rem
-- position
+- margin collapsing
+- background gradiant
+- finish landing page
+- card look
+
+### 19 Day
+
+Footer 2024-02-06
+
+- card look
