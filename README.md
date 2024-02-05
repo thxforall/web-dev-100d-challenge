@@ -114,7 +114,7 @@ Main, Section 2024-02-04
 
 ### 18 Day
 
-Footer 2024-02-05
+New page 2024-02-05
 
 - margin collapsing
 - background gradiant
@@ -123,6 +123,9 @@ Footer 2024-02-05
 
 ### 19 Day
 
-Footer 2024-02-06
+Card lock, Grid 2024-02-06
 
 - card look
+- over-flow
+- grid
+- nth-type
