@@ -136,4 +136,12 @@ Card lock, Grid 2024-02-07
 
 - grid challenge
 - utf-8
-- finished
+- layout-css finished
+- responsive design
+
+### 21 Day
+
+Card lock, Grid 2024-02-08
+
+- responsive unit
+- rem, %
