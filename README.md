@@ -129,3 +129,11 @@ Card lock, Grid 2024-02-06
 - over-flow
 - grid
 - nth-type
+
+### 20 Day
+
+Card lock, Grid 2024-02-07
+
+- grid challenge
+- utf-8
+- finished
