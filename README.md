@@ -154,7 +154,7 @@ Media query 2024-02-09
 - rem, em, %
 - media query
 
-### 22 Day
+### 23 Day
 
 Media query 2024-02-10
 
