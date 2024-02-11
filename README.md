@@ -162,12 +162,22 @@ Media query 2024-02-10
 - hamburger icon
 - internal links
 
-### 24~25 Day
+### 24 Day
 
-Web Designing 2024-02-11 ~ 2024-02-12
+Web Designing 2024-02-11
 
 - target selector
 - designing beautiful web
 - size and space
 - font
 - color
+
+### 25 Day
+
+Css custom property 2024-02-12
+
+- variable
+- html, :root, \*
+- transform
+- transition
+- SVG
