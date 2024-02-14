@@ -189,6 +189,8 @@ Web Forms 2024-02-13 ~ 2024-02-14
 - button
 - form
 - label
+- form styling
+- input type
 
 ### 28 Day
 
