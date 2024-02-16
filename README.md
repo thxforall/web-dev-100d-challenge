@@ -208,11 +208,16 @@ Web Forms 2024-02-15
 JavaScript Basic 2024-02-16
 
 - module intro
-- values
+- values & variables
 
 ### 30 Day
 
-2024-02-17
+JavaScript Introduction 2024-02-17
+
+- values & variables
+- outsosing
+- array
+- object
 
 ### 31 Day
 
