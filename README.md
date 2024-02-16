@@ -194,4 +194,26 @@ Web Forms 2024-02-13 ~ 2024-02-14
 
 ### 28 Day
 
-2024-02-15
+Web Forms 2024-02-15
+
+- check box
+- text area
+- drop down
+- form structor
+- btn type
+- validation
+
+### 29 Day
+
+JavaScript Basic 2024-02-16
+
+- module intro
+- values
+
+### 30 Day
+
+2024-02-17
+
+### 31 Day
+
+2024-02-18
