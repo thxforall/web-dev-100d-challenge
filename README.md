@@ -221,4 +221,9 @@ JavaScript Introduction 2024-02-17
 
 ### 31 Day
 
-2024-02-18
+Object & Function 2024-02-18
+
+- line-breaking
+- calculate
+- function
+- variable shadowing
