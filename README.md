@@ -227,3 +227,10 @@ Object & Function 2024-02-18
 - calculate
 - function
 - variable shadowing
+
+### 32 Day
+
+Practice & Calculation 2024-02-19
+
+- method
+- string
