@@ -230,7 +230,9 @@ Object & Function 2024-02-18
 
 ### 32 Day
 
-Practice & Calculation 2024-02-19
+Operation & Method 2024-02-19
 
+- js practice(variable, arry, object)
 - method
-- string
+- math operation
+- string/array method

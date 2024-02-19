@@ -20,3 +20,12 @@ age = 35;
 totalAdultYears = calculateAdulyYears(age);
 
 console.log(totalAdultYears);
+
+let person = {
+  name: 'kiyori',
+  greet() {
+    console.log('Hi!');
+  },
+};
+
+person.greet();
