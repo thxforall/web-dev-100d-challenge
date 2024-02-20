@@ -236,3 +236,11 @@ Operation & Method 2024-02-19
 - method
 - math operation
 - string/array method
+
+### 33 Day
+
+Array & DOM 2024-02-20
+
+- array
+- window, document
+- DOM
