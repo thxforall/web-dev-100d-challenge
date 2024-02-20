@@ -243,4 +243,14 @@ Array & DOM 2024-02-20
 
 - array
 - window, document
-- DOM
+- DOM / DOM Tree
+- query elements
+
+### 34 Day
+
+DOM 2024-02-21
+
+- DOM drilling
+- element query
+- query method
+- append Element
