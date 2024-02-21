@@ -1,22 +1,19 @@
-// document.body.children[2].children[0].href = 'https://www.google.com';
+let paragraphElement = document.querySelector('p');
 
-let anchorElement = document.getElementById('external-link');
-anchorElement.href = 'https://www.naver.com';
+function changeParagraphText() {
+  paragraphElement.textContent = 'Clicked';
+}
 
-anchorElement = document.querySelector('#external-link');
-anchorElement.href = 'https://www.google.com';
+paragraphElement.addEventListener('click', changeParagraphText);
 
-// ADD AN ELEMENT
-// 1. Create the new element
+let inputElement = document.querySelector('input');
 
-let newAnchorElement = document.createElement('a');
-newAnchorElement.href = 'https://google.com';
-newAnchorElement.textContent = 'To Google';
+function retriveUserInput(event) {
+  //   let enteredText = inputElement.value;
+  let enteredText = event.target.value;
+  //   let enteredText = event.data; -> this is different!
+  console.log(enteredText);
+  console.log(event);
+}
 
-// 2. Get access to the parent element that should hold the new element
-
-let firstParagraph = document.querySelector('p');
-
-// 3. Insert the new element into the parent element content
-
-firstParagraph.append(newAnchorElement);
+inputElement.addEventListener('input', retriveUserInput);

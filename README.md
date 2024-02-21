@@ -254,3 +254,12 @@ DOM 2024-02-21
 - element query
 - query method
 - append Element
+
+### 35 Day
+
+DOM & Events 2024-02-22
+
+- remove element
+- move element
+- innerHTML
+- event
