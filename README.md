@@ -263,3 +263,11 @@ DOM & Events 2024-02-22
 - move element
 - innerHTML
 - event
+
+### 36 Day
+
+Demo & Practice 2024-02-23
+
+- Variables & Constants
+- Js in css property
+- classList, className

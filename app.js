@@ -1,19 +1,13 @@
-let paragraphElement = document.querySelector('p');
+const productNameInputElement = document.getElementById('product-name');
+const inputLength = document.getElementById('input-length');
+const maxLength = productNameInputElement.maxLength;
 
-function changeParagraphText() {
-  paragraphElement.textContent = 'Clicked';
+function countInputLength(event) {
+  const inputText = event.target.value;
+  const inputTextLength = inputText.length;
+
+  const remainingCharacters = maxLength - inputTextLength;
+  inputLength.textContent = remainingCharacters;
 }
 
-paragraphElement.addEventListener('click', changeParagraphText);
-
-let inputElement = document.querySelector('input');
-
-function retriveUserInput(event) {
-  //   let enteredText = inputElement.value;
-  let enteredText = event.target.value;
-  //   let enteredText = event.data; -> this is different!
-  console.log(enteredText);
-  console.log(event);
-}
-
-inputElement.addEventListener('input', retriveUserInput);
+productNameInputElement.addEventListener('input', countInputLength);
