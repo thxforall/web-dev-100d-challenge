@@ -271,3 +271,13 @@ Demo & Practice 2024-02-23
 - Variables & Constants
 - Js in css property
 - classList, className
+
+### 37 Day
+
+Exercise & Construct Structture 2024-02-24
+
+- exercise
+- boolean
+- if
+- comparison
+- &&, ||

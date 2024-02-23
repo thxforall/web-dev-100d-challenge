@@ -8,6 +8,12 @@ function countInputLength(event) {
 
   const remainingCharacters = maxLength - inputTextLength;
   inputLength.textContent = remainingCharacters;
+
+  if (remainingCharacters <= 10) {
+    productNameInputElement.classList.add('warning');
+  } else {
+    productNameInputElement.classList.remove('warning');
+  }
 }
 
 productNameInputElement.addEventListener('input', countInputLength);
