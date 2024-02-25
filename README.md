@@ -281,3 +281,13 @@ Exercise & Construct Structture 2024-02-24
 - if
 - comparison
 - &&, ||
+
+### 38 Day
+
+Exercise & Construct Structture 2024-02-24
+
+- exercise
+- boolean
+- if
+- comparison
+- &&, ||
