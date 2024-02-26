@@ -284,10 +284,12 @@ Exercise & Construct Structture 2024-02-24
 
 ### 38 Day
 
-Exercise & Construct Structture 2024-02-24
+More Construct Structure 2024-02-25
 
-- exercise
-- boolean
-- if
-- comparison
-- &&, ||
+- if, else if, else
+- boolean variable
+- Loops
+
+### 39 Day
+
+Exercise & Construct Structture 2024-02-26
