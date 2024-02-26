@@ -1,28 +1,19 @@
-for (let i = 0; i < 10; i++) {
-  console.log(i);
+const inputUserNumberElement = document.getElementById('user-number');
+const btnCalculateSumElement = document.getElementById('btn-calculate-sum');
+const resultCalculateSumElement = document.getElementById('calculated-sum');
+
+let resultCalculateSumNum = 0;
+
+function getUserNumberInput() {
+  return parseInt(inputUserNumberElement.value);
 }
 
-const users = ['Max', 'Anna', 'Joel'];
-
-for (const user of users) {
-  console.log(user);
+function handlerBtnCalculateSum() {
+  if (inputUserNumberElement.value) {
+    resultCalculateSumNum += getUserNumberInput();
+    resultCalculateSumElement.textContent = resultCalculateSumNum;
+    resultCalculateSumElement.style.display = 'block';
+  }
 }
 
-const loggedInUser = {
-  name: 'Max',
-  age: 32,
-  isAdmin: true,
-};
-
-for (const propertyName in loggedInUser) {
-  console.log(propertyName);
-  console.log(loggedInUser[propertyName]);
-}
-
-let isFinished = false;
-
-while (!isFinished) {
-  isFinished = confirm('Do you want to quit?');
-}
-
-console.log('Done!');
+btnCalculateSumElement.addEventListener('click', handlerBtnCalculateSum);
