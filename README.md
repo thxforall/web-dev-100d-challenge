@@ -292,4 +292,9 @@ More Construct Structure 2024-02-25
 
 ### 39 Day
 
-Exercise & Construct Structture 2024-02-26
+Loops Exercise 2024-02-26
+
+- for
+- for of
+- for in
+- while
