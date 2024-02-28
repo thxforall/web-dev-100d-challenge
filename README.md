@@ -298,3 +298,21 @@ Loops Exercise 2024-02-26
 - for of
 - for in
 - while
+
+### 40 Day
+
+Loops Exercise 2024-02-27
+
+- for
+- for of
+- for in
+- while
+
+### 41 Day
+
+Loops Exercise 2024-02-28
+
+- for
+- for of
+- for in
+- while
