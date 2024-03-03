@@ -310,9 +310,12 @@ TicTacToe Game 2024-02-27 ~ 2024-03-02
 
 ### 45 Day
 
-Package 2024-03-03
+Third-Party Package 2024-03-03
 
-- bootstrap
+- Packages
+- bootstrap, material ui, tailwind css
+- images carousel, scrollspy, parallax
+- bootstrap demon
 
 ### 46 Day
 
