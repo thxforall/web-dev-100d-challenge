@@ -304,4 +304,6 @@ Loops Exercise 2024-02-26
 TicTacToe Game 2024-02-27 ~ 2024-03-02
 
 - Html & Css
--
+- Js(app, config)
+- Js blueprint
+- input data
