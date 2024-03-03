@@ -299,14 +299,9 @@ Loops Exercise 2024-02-26
 - for in
 - while
 
-### 40 Day ~ 43 Day
+### 40 Day ~ 44 Day
 
-TicTacTo Game 2024-02-27 ~ 2024-03-01
+TicTacToe Game 2024-02-27 ~ 2024-03-02
 
--
-
-### 44 Day
-
-TicTacTo Game 2024-03-02
-
+- Html & Css
 -
