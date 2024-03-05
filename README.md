@@ -324,22 +324,18 @@ BackEnd 2024-03-04
 - start back-end
 - full stack
 - Sercer-side code
-- node-js / Javascript
+- NodeJs / Javascript
 
 ### 47 Day
 
-BackEnd 2024-03-05
+NodeJs Introduction 2024-03-05
 
-- start back-end
-- full stack
-- Sercer-side code
-- node-js / Javascript
+- JavaScript Runtime
+- command line
+- personal NodeJs Server
+- request, response
+- request.url
 
 ### 48 Day
 
-BackEnd 2024-03-06
-
-- start back-end
-- full stack
-- Sercer-side code
-- node-js / Javascript
+NdeJs 2024-03-06
