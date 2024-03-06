@@ -338,4 +338,17 @@ NodeJs Introduction 2024-03-05
 
 ### 48 Day
 
-NdeJs 2024-03-06
+ExpressJs Inro 2024-03-06
+
+- ExpressJs Intro
+- req, res
+- get, post
+- middleware use
+- storing data
+
+### 49 Day
+
+ExpressJs More 2024-03-07
+
+- file data read
+-
