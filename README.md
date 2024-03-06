@@ -351,4 +351,7 @@ ExpressJs Inro 2024-03-06
 ExpressJs More 2024-03-07
 
 - file data read
--
+- dynamic html response
+- nodemon
+- new project
+- static to dynamic

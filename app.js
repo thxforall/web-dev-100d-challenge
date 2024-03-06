@@ -5,53 +5,33 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-import express from 'express'; // const express = require('express');
+import express from 'express';
 
 const app = express();
 
-app.use(
-  express.urlencoded({
-    extended: false,
-  })
-);
-
-app.get('/currenttime', function (req, res) {
-  res.send('<h1>' + new Date().toISOString() + '</h1>');
-}); // localhost:3000/currenttime
-
 app.get('/', function (req, res) {
-  res.send(
-    '<form action="/store-user" method="POST"><label>Your name</label><input type="text" name="username" /><button type="submit">Submit</button></form>'
-  );
+  const htmlFilePath = path.join(__dirname, 'views', 'index.html');
+  res.sendFile(htmlFilePath);
 });
 
-app.post('/store-user', function (req, res) {
-  const userName = req.body.username;
+app.get('/restaurants', function (req, res) {
+  const htmlFilePath = path.join(__dirname, 'views', 'restaurants.html');
+  res.sendFile(htmlFilePath);
+});
 
-  const filePath = path.join(__dirname, 'data', 'users.json');
+app.get('/recommend', function (req, res) {
+  const htmlFilePath = path.join(__dirname, 'views', 'recommend.html');
+  res.sendFile(htmlFilePath);
+});
 
-  const fileData = fs.readFileSync(filePath);
-  const existingUsers = JSON.parse(fileData);
+app.get('/confirm', function (req, res) {
+  const htmlFilePath = path.join(__dirname, 'views', 'confirm.html');
+  res.sendFile(htmlFilePath);
+});
 
-  existingUsers.push(userName);
-
-  fs.writeFileSync(filePath, JSON.stringify(existingUsers));
-
-  res.send('<h1>Username stored!</h1>');
+app.get('/about', function (req, res) {
+  const htmlFilePath = path.join(__dirname, 'views', 'about.html');
+  res.sendFile(htmlFilePath);
 });
 
 app.listen(3000);
-
-// function handleRequest(request, response) {
-//   if (request.url === '/currenttime') {
-//     response.statusCode = 200;
-//     response.end();
-//   } else if (request.url === '/') {
-//     response.statusCode = 200;
-//     response.end('');
-//   }
-// }
-// const server = createServer(handleRequest);
-// // amazon.com => Send a request to Amazon's server
-// // amazon.com:80 / 443
-// server.listen(3000);
