@@ -355,3 +355,12 @@ ExpressJs More 2024-03-07
 - nodemon
 - new project
 - static to dynamic
+
+### 50 Day
+
+Request handling 2024-03-08
+
+- static file, dynamic file public
+- EJS
+- EJS dynamic render
+- EJS for, if
