@@ -367,7 +367,10 @@ Request handling 2024-03-08
 
 ### 51 Day
 
-2024-03-09
+More EJS 2024-03-09
+
+- includes
+- EJS & IDE extension
 
 ### 52 Day
 
