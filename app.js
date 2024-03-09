@@ -1,11 +1,13 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { v4 as uuidv4 } from 'uuid';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 import express from 'express';
+import { error } from 'console';
 
 const app = express();
 
@@ -20,7 +22,6 @@ app.get('/', function (req, res) {
 });
 
 app.get('/restaurants', function (req, res) {
-  const restaurant = req.body;
   const filePath = path.join(__dirname, 'data', 'restaurants.json');
 
   const fileData = fs.readFileSync(filePath);
@@ -32,20 +33,33 @@ app.get('/restaurants', function (req, res) {
   });
 });
 
+app.get('/restaurants/:id', function (req, res) {
+  const restaurantId = req.params.id;
+  const filePath = path.join(__dirname, 'data', 'restaurants.json');
+
+  const fileData = fs.readFileSync(filePath);
+  const storeRestaurants = JSON.parse(fileData);
+
+  for (const restaurant of storeRestaurants) {
+    if (restaurant.id === restaurantId) {
+      return res.render('restaurants-detail', { restaurant: restaurant });
+    }
+  }
+  res.status(404).render('404');
+});
+
 app.get('/recommend', function (req, res) {
   res.render('recommend');
 });
 
 app.post('/recommend', function (req, res) {
   const restaurant = req.body;
-  const filePath = path.join(__dirname, 'data', 'restaurants.json');
+  restaurant.id = uuidv4();
+  const restaurants = getStoredRestaurant();
 
-  const fileData = fs.readFileSync(filePath);
-  const storeRestaurants = JSON.parse(fileData);
+  restaurants.push(restaurant);
 
-  storeRestaurants.push(restaurant);
-
-  fs.writeFileSync(filePath, JSON.stringify(storeRestaurants));
+  storeRestaurants(restaurants);
 
   res.redirect('/confirm');
 });
@@ -56,6 +70,14 @@ app.get('/confirm', function (req, res) {
 
 app.get('/about', function (req, res) {
   res.render('about');
+});
+
+app.use(function (req, res) {
+  res.status(404).render('404');
+});
+
+app.use(function (error, req, res, next) {
+  res.status(500).render('500');
 });
 
 app.listen(3000);

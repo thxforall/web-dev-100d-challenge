@@ -371,7 +371,19 @@ More EJS 2024-03-09
 
 - includes
 - EJS & IDE extension
+- formatting setting
+- server side-code
+- dynamic route
+- id package
 
 ### 52 Day
 
-2024-03-10
+Error Page 2024-03-10
+
+- 404, 500 use router
+- status code (200, 404, 401, 500)
+- code refactoring
+
+### 53 Day
+
+2024-03-11
