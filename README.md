@@ -386,7 +386,14 @@ Error Page 2024-03-10
 
 ### 53 Day
 
-Route 2024-03-11
+Export, Route 2024-03-11
+
+- import file / export module
+- express route
+- outsourcing
+- query parameter
+- sort()
+- dynamic parameter vs query parameter
 
 ### 54 Day
 
