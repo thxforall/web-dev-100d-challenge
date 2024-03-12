@@ -397,4 +397,13 @@ Export, Route 2024-03-11
 
 ### 54 Day
 
-More Js function 2024-03-12
+Advanced JS 2024-03-12
+
+- ...rest parameter / ...spread operator
+- function == object
+- template literal
+- primitive , reference values
+
+### 55 Day
+
+Advanced JS 2024-03-13
