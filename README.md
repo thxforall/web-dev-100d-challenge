@@ -407,3 +407,28 @@ Advanced JS 2024-03-12
 ### 55 Day
 
 Advanced JS 2024-03-13
+
+- try / catch
+- scoping & shadowing
+- class
+- class method
+- object & array destructoring
+
+### 56 Day
+
+Asyncro 2024-03-14
+
+- async
+- callback
+- promises
+- async catch
+- async await
+- database intro
+
+### 57 Day
+
+Database 2024-03-15
+
+### 58 Day
+
+Table 2024-03-16
