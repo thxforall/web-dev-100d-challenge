@@ -429,14 +429,28 @@ Asyncro 2024-03-14
 
 Database 2024-03-15
 
+- SQL
+- NoSQL
+- SQL vs NoSQL
+- MySQL setting
+
 ### 58 Day
 
-Table 2024-03-16
+MySQL Database 2024-03-16
+
+- CRUD
+- table & schema / structure
 
 ### 59 Day
 
-Table 2024-03-16
+Make more table 2024-03-17
+
+- CRUD practice
 
 ### 60 Day
 
-Table 2024-03-16
+Table 2024-03-18
+
+### 61 Day
+
+Table 2024-03-19
