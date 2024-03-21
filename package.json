@@ -5,24 +5,17 @@
   "type": "module",
   "main": "app.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "start": "nodemon app.js"
+    "start": "nodemon --exec babel-node app.js"
   },
   "author": "Kiyori",
   "devDependencies": {
-    "eslint": "^8.57.0",
-    "eslint-config-google": "^0.14.0",
-    "eslint-config-prettier": "^9.1.0",
-    "nodemon": "^3.1.0",
-    "prettier": "^3.2.5",
-    "sass": "^1.70.0",
-    "vite": "^5.0.8"
+    "@babel/core": "^7.24.0",
+    "@babel/node": "^7.23.9",
+    "@babel/preset-env": "^7.24.0",
+    "nodemon": "^3.1.0"
   },
   "dependencies": {
     "ejs": "^3.1.9",
-    "express": "^4.18.3",
-    "uuid": "^9.0.1"
+    "express": "^4.18.3"
   }
 }

@@ -446,10 +446,17 @@ MySQL Database 2024-03-16
 Make more table 2024-03-17
 
 - CRUD practice
+- query join
+- MySql query
 
 ### 60 Day
 
-Table 2024-03-18
+Database in NodeJS 2024-03-18
+
+- Why 'Back'end
+- Planning database structure
+- authors, posts
+- Blog Project
 
 ### 61 Day
 
@@ -462,3 +469,7 @@ Table 2024-03-20
 ### 63 Day
 
 Table 2024-03-21
+
+### 64 Day
+
+Table 2024-03-22
