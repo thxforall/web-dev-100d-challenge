@@ -478,15 +478,27 @@ NodeJs Database 2024-03-20
 
 ### 63 Day
 
-NoSQL 2024-03-21
+NoSQL & MongoDB 2024-03-21
+
+- NoSQL Database System
+- MongoDB Intro & setting
+- MongoDB inerstOne() db
 
 ### 64 Day
 
-Table 2024-03-22
+MongoDB practice 2024-03-22
+
+- find & filter
+- update
+- delete
+- database build
+- practice
 
 ### 65 Day
 
-Table 2024-03-23
+NodeJs & MongoDB 2024-03-23
+
+- project setting
 
 ### 66 Day
 
