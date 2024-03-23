@@ -499,7 +499,13 @@ MongoDB practice 2024-03-22
 NodeJs & MongoDB 2024-03-23
 
 - project setting
+- database structure
+- database connect nodejs
+- find() nodejs
+- insertOne() nodejs
 
 ### 66 Day
 
-Table 2024-03-24
+NodeJs & MongoDB Blog 2024-03-24
+
+- find() node.js list

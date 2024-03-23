@@ -1,11 +1,10 @@
 import express from 'express';
 
-import blogRoutes from './routes/blog.js';
-import { connectToDatabase, getDb } from './data/database.js';
+import blogRoutes from '../../routes/blog.js';
 
 const app = express();
 
-// Activate EJS view engine
+// Activate EJS view ençgine
 app.set('view engine', 'ejs');
 app.set('views', process.cwd() + '/views');
 
@@ -21,6 +20,4 @@ app.use(function (error, req, res, next) {
   res.status(500).render('500');
 });
 
-connectToDatabase().then(function () {
-  app.listen(3000);
-});
+app.listen(3000);
