@@ -460,16 +460,34 @@ Database in NodeJS 2024-03-18
 
 ### 61 Day
 
-Table 2024-03-19
+Database connect 2024-03-19
+
+- connection pool
+- select database
+- insert database
+- select inner join database
 
 ### 62 Day
 
-Table 2024-03-20
+NodeJs Database 2024-03-20
+
+- select where
+- date type overwrite
+- update database
+- delete database
 
 ### 63 Day
 
-Table 2024-03-21
+NoSQL 2024-03-21
 
 ### 64 Day
 
 Table 2024-03-22
+
+### 65 Day
+
+Table 2024-03-23
+
+### 66 Day
+
+Table 2024-03-24

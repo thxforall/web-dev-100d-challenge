@@ -6,3 +6,10 @@ CREATE TABLE posts (
 	`date` DATETIME DEFAULT CURRENT_TIMESTAMP,
     `author_id` INT NOT NULL,
 PRIMARY KEY(`id`));
+
+DROP TABLE `blog`.`posts`;
+
+INSERT INTO posts (title, summary, body, author_id) 
+VALUES ('test', 'test', 'test', 1234);
+
+SELECT * FROM posts;
