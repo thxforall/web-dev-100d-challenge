@@ -512,16 +512,24 @@ NodeJs & MongoDB Blog 2024-03-24
 
 ### 67 Day
 
-NodeJs & MongoDB Blog 2024-03-25
+2024-03-25
 
 ### 68 Day
 
-NodeJs & MongoDB Blog 2024-03-26
+2024-03-26
 
 ### 69 Day
 
-NodeJs & MongoDB Blog 2024-03-27
+2024-03-27
 
 ### 70 Day
 
-NodeJs & MongoDB Blog 2024-03-28
+2024-03-28
+
+### 71 Day
+
+2024-03-29
+
+### 72 Day
+
+2024-03-30
