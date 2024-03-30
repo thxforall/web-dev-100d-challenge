@@ -509,6 +509,8 @@ NodeJs & MongoDB 2024-03-23
 NodeJs & MongoDB Blog 2024-03-24
 
 - find() node.js list
+- date toLoacleDateString
+- view detail find by id
 
 ### 67 Day
 

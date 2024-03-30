@@ -22,5 +22,6 @@ app.use(function (error, req, res, next) {
 });
 
 connectToDatabase().then(function () {
+  console.log(`http://localhost:3000`);
   app.listen(3000);
 });
