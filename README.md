@@ -524,7 +524,9 @@ File Upload 2024-03-25
 
 Upload Database 2024-03-26
 
+- upload iamge list static
 - image preview
+- Ajax
 
 ### 69 Day
 

@@ -10,6 +10,7 @@ app.set('views', process.cwd() + '/views');
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static('public'));
+app.use('/images', express.static('images'));
 
 app.use(userRoutes);
 
