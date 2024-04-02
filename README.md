@@ -526,7 +526,9 @@ Upload Database 2024-03-26
 
 - upload iamge list static
 - image preview
-- Ajax
+- Ajax, http request
+- XMLhttpRequest
+- fetch()
 
 ### 69 Day
 
@@ -551,3 +553,11 @@ Session 2024-03-31
 ### 74 Day
 
 Session 2024-04-01
+
+### 75 Day
+
+Session 2024-04-02
+
+### 76 Day
+
+Session 2024-04-03

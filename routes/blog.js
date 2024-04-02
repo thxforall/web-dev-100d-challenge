@@ -1,36 +1,32 @@
-const express = require('express');
-const mongodb = require('mongodb');
+import express from 'express';
+import mongodb from 'mongodb';
 
-const db = require('../data/database');
+import { db } from '../data/database.js';
 
 const ObjectId = mongodb.ObjectId;
 
-const router = express.Router();
+const blogRoutes = express.Router();
 
-router.get('/', function (req, res) {
+blogRoutes.get('/', function (req, res) {
   res.redirect('/posts');
 });
 
-router.get('/posts', async function (req, res) {
-  const posts = await db
-    .getDb()
+blogRoutes.get('/posts', async function (req, res) {
+  const posts = await db()
     .collection('posts')
     .find({}, { title: 1, summary: 1, 'author.name': 1 })
     .toArray();
   res.render('posts-list', { posts: posts });
 });
 
-router.get('/new-post', async function (req, res) {
-  const authors = await db.getDb().collection('authors').find().toArray();
+blogRoutes.get('/new-post', async function (req, res) {
+  const authors = await db().collection('authors').find().toArray();
   res.render('create-post', { authors: authors });
 });
 
-router.post('/posts', async function (req, res) {
+blogRoutes.post('/posts', async function (req, res) {
   const authorId = new ObjectId(req.body.author);
-  const author = await db
-    .getDb()
-    .collection('authors')
-    .findOne({ _id: authorId });
+  const author = await db().collection('authors').findOne({ _id: authorId });
 
   const newPost = {
     title: req.body.title,
@@ -44,15 +40,14 @@ router.post('/posts', async function (req, res) {
     },
   };
 
-  const result = await db.getDb().collection('posts').insertOne(newPost);
+  const result = await db().collection('posts').insertOne(newPost);
   console.log(result);
   res.redirect('/posts');
 });
 
-router.get('/posts/:id', async function (req, res) {
+blogRoutes.get('/posts/:id', async function (req, res) {
   const postId = req.params.id;
-  const post = await db
-    .getDb()
+  const post = await db()
     .collection('posts')
     .findOne({ _id: new ObjectId(postId) }, { summary: 0 });
 
@@ -71,10 +66,9 @@ router.get('/posts/:id', async function (req, res) {
   res.render('post-detail', { post: post, comments: null });
 });
 
-router.get('/posts/:id/edit', async function (req, res) {
+blogRoutes.get('/posts/:id/edit', async function (req, res) {
   const postId = req.params.id;
-  const post = await db
-    .getDb()
+  const post = await db()
     .collection('posts')
     .findOne({ _id: new ObjectId(postId) }, { title: 1, summary: 1, body: 1 });
 
@@ -85,10 +79,9 @@ router.get('/posts/:id/edit', async function (req, res) {
   res.render('update-post', { post: post });
 });
 
-router.post('/posts/:id/edit', async function (req, res) {
+blogRoutes.post('/posts/:id/edit', async function (req, res) {
   const postId = new ObjectId(req.params.id);
-  const result = await db
-    .getDb()
+  const result = await db()
     .collection('posts')
     .updateOne(
       { _id: postId },
@@ -105,20 +98,16 @@ router.post('/posts/:id/edit', async function (req, res) {
   res.redirect('/posts');
 });
 
-router.post('/posts/:id/delete', async function (req, res) {
+blogRoutes.post('/posts/:id/delete', async function (req, res) {
   const postId = new ObjectId(req.params.id);
-  const result = await db
-    .getDb()
-    .collection('posts')
-    .deleteOne({ _id: postId });
+  const result = await db().collection('posts').deleteOne({ _id: postId });
   res.redirect('/posts');
 });
 
-router.get('/posts/:id/comments', async function (req, res) {
+blogRoutes.get('/posts/:id/comments', async function (req, res) {
   const postId = new ObjectId(req.params.id);
-  const post = await db.getDb().collection('posts').findOne({ _id: postId });
-  const comments = await db
-    .getDb()
+  const post = await db().collection('posts').findOne({ _id: postId });
+  const comments = await db()
     .collection('comments')
     .find({ postId: postId })
     .toArray();
@@ -126,15 +115,15 @@ router.get('/posts/:id/comments', async function (req, res) {
   return res.render('post-detail', { post: post, comments: comments });
 });
 
-router.post('/posts/:id/comments', async function (req, res) {
+blogRoutes.post('/posts/:id/comments', async function (req, res) {
   const postId = new ObjectId(req.params.id);
   const newComment = {
     postId: postId,
     title: req.body.title,
     text: req.body.text,
   };
-  await db.getDb().collection('comments').insertOne(newComment);
+  await db().collection('comments').insertOne(newComment);
   res.redirect('/posts/' + req.params.id);
 });
 
-module.exports = router;
+export default blogRoutes;
