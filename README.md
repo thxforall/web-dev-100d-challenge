@@ -541,11 +541,16 @@ Ajax blog post 2024-03-27
 
 ### 70 Day
 
-User Velidation 2024-03-28
+More Ajax 2024-03-28
+
+- ajax if
+- handling error
+- more http method
+- user authentication
 
 ### 71 Day
 
-API 2024-03-29
+User Sign up & login 2024-03-29
 
 ### 72 Day
 

@@ -1,7 +1,7 @@
 import express from 'express';
 import mongodb from 'mongodb';
 
-import { db } from '../data/database.js';
+import { db } from '../finished-sections/20.ajax-blog-post/data/database.js';
 
 const ObjectId = mongodb.ObjectId;
 

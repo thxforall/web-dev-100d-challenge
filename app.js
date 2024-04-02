@@ -1,28 +1,24 @@
-import express from 'express';
+const path = require('path');
 
-import blogRoutes from './routes/blog.js';
-import { connectToDatabase, db } from './data/database.js';
+const express = require('express');
+
+const db = require('./data/database');
+const demoRoutes = require('./routes/demo');
 
 const app = express();
 
-// Activate EJS view engine
 app.set('view engine', 'ejs');
-app.set('views', process.cwd() + '/views');
+app.set('views', path.join(__dirname, 'views'));
 
-app.use(express.urlencoded({ extended: true })); // Parse incoming request bodies
-app.use(express.json());
-app.use(express.static('public')); // Serve static files (e.g. CSS files)
+app.use(express.static('public'));
+app.use(express.urlencoded({ extended: false }));
 
-app.use(blogRoutes);
+app.use(demoRoutes);
 
-app.use(function (error, req, res, next) {
-  // Default error handling function
-  // Will become active whenever any route / middleware crashes
-  console.log(error);
-  res.status(500).render('500');
-});
+app.use(function(error, req, res, next) {
+  res.render('500');
+})
 
-connectToDatabase().then(function () {
-  console.log('http://localhost:3000/');
+db.connectToDatabase().then(function () {
   app.listen(3000);
 });
