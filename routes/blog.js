@@ -45,7 +45,7 @@ blogRoutes.post('/posts', async function (req, res) {
   res.redirect('/posts');
 });
 
-blogRoutes.get('/posts/:id', async function (req, res) {
+blogRoutes.get('/posts/:id([0-9a-z]{24})', async function (req, res) {
   const postId = req.params.id;
   const post = await db()
     .collection('posts')
@@ -66,7 +66,7 @@ blogRoutes.get('/posts/:id', async function (req, res) {
   res.render('post-detail', { post: post, comments: null });
 });
 
-blogRoutes.get('/posts/:id/edit', async function (req, res) {
+blogRoutes.get('/posts/:id([0-9a-z]{24})/edit', async function (req, res) {
   const postId = req.params.id;
   const post = await db()
     .collection('posts')
@@ -79,7 +79,7 @@ blogRoutes.get('/posts/:id/edit', async function (req, res) {
   res.render('update-post', { post: post });
 });
 
-blogRoutes.post('/posts/:id/edit', async function (req, res) {
+blogRoutes.post('/posts/:id([0-9a-z]{24})/edit', async function (req, res) {
   const postId = new ObjectId(req.params.id);
   const result = await db()
     .collection('posts')
@@ -98,24 +98,23 @@ blogRoutes.post('/posts/:id/edit', async function (req, res) {
   res.redirect('/posts');
 });
 
-blogRoutes.post('/posts/:id/delete', async function (req, res) {
+blogRoutes.post('/posts/:id([0-9a-z]{24})/delete', async function (req, res) {
   const postId = new ObjectId(req.params.id);
   const result = await db().collection('posts').deleteOne({ _id: postId });
   res.redirect('/posts');
 });
 
-blogRoutes.get('/posts/:id/comments', async function (req, res) {
+blogRoutes.get('/posts/:id([0-9a-z]{24})/comments', async function (req, res) {
   const postId = new ObjectId(req.params.id);
-  const post = await db().collection('posts').findOne({ _id: postId });
   const comments = await db()
     .collection('comments')
     .find({ postId: postId })
     .toArray();
 
-  return res.render('post-detail', { post: post, comments: comments });
+  res.json(comments);
 });
 
-blogRoutes.post('/posts/:id/comments', async function (req, res) {
+blogRoutes.post('/posts/:id([0-9a-z]{24})/comments', async function (req, res) {
   const postId = new ObjectId(req.params.id);
   const newComment = {
     postId: postId,
@@ -123,7 +122,7 @@ blogRoutes.post('/posts/:id/comments', async function (req, res) {
     text: req.body.text,
   };
   await db().collection('comments').insertOne(newComment);
-  res.redirect('/posts/' + req.params.id);
+  res.json({ message: 'Comment added!' });
 });
 
 export default blogRoutes;

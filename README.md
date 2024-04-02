@@ -532,7 +532,12 @@ Upload Database 2024-03-26
 
 ### 69 Day
 
-Ajax 2024-03-27
+Ajax blog post 2024-03-27
+
+- Ajax project
+- get ajax
+- dom update
+- post ajax
 
 ### 70 Day
 
