@@ -1,24 +1,23 @@
-const path = require('path');
+import express from 'express';
 
-const express = require('express');
-
-const db = require('./data/database');
-const demoRoutes = require('./routes/demo');
+import { getDb as db, connectToDatabase } from './data/database.js';
+import { router as demoRoutes } from './routes/demo.js';
 
 const app = express();
 
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', process.cwd() + '/views');
 
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 
 app.use(demoRoutes);
 
-app.use(function(error, req, res, next) {
+app.use(function (error, req, res, next) {
   res.render('500');
-})
+});
 
-db.connectToDatabase().then(function () {
+connectToDatabase().then(function () {
+  console.log('http://localhost:3000');
   app.listen(3000);
 });
