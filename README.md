@@ -555,23 +555,26 @@ User Sign up & login 2024-03-29
 - hashing pw
 - authentication
 - session & cookie
-- 
+-
 
 ### 72 Day
 
-Session 2024-03-30
+Session & Cookie 2024-03-30
+
+- cookie session
+- logout
 
 ### 73 Day
 
-Session 2024-03-31
+Auth middleware 2024-03-31
 
 ### 74 Day
 
-Session 2024-04-01
+Security 2024-04-01
 
 ### 75 Day
 
-Session 2024-04-02
+Security 2024-04-02
 
 ### 76 Day
 
@@ -579,16 +582,16 @@ Session 2024-04-03
 
 ### 76 Day
 
-Session 2024-04-03
+Clean Code 2024-04-03
 
 ### 77 Day
 
-Session 2024-04-04
+Refactoring 2024-04-04
 
 ### 78 Day
 
-Session 2024-04-05
+MVC 2024-04-05
 
 ### 79 Day
 
-Session 2024-04-06
+Shopping mall Project 2024-04-06
