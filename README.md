@@ -566,7 +566,9 @@ Session & Cookie 2024-03-30
 
 ### 73 Day
 
-Auth middleware 2024-03-31
+Authorization 2024-03-31
+
+- 
 
 ### 74 Day
 
