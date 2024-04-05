@@ -554,7 +554,8 @@ User Sign up & login 2024-03-29
 
 - hashing pw
 - authentication
--
+- session & cookie
+- 
 
 ### 72 Day
 
