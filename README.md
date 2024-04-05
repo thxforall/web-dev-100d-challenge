@@ -552,6 +552,10 @@ More Ajax 2024-03-28
 
 User Sign up & login 2024-03-29
 
+- hashing pw
+- authentication
+-
+
 ### 72 Day
 
 Session 2024-03-30
@@ -583,3 +587,7 @@ Session 2024-04-04
 ### 78 Day
 
 Session 2024-04-05
+
+### 79 Day
+
+Session 2024-04-06
