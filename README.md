@@ -568,7 +568,7 @@ Session & Cookie 2024-03-30
 
 Authorization 2024-03-31
 
-- 
+-
 
 ### 74 Day
 
@@ -597,3 +597,11 @@ MVC 2024-04-05
 ### 79 Day
 
 Shopping mall Project 2024-04-06
+
+### 80 Day
+
+Shopping mall Project 2024-04-07
+
+### 81 Day
+
+Shopping mall Project 2024-04-08
