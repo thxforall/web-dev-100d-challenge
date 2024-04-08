@@ -576,6 +576,10 @@ Authorization 2024-03-31
 
 Security 2024-04-01
 
+- CSRF attack
+- SameSite Cookie
+- XSS attack
+
 ### 75 Day
 
 Security 2024-04-02
