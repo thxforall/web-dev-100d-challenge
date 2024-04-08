@@ -568,7 +568,9 @@ Session & Cookie 2024-03-30
 
 Authorization 2024-03-31
 
--
+- login session
+- error session value
+- middleware res.local
 
 ### 74 Day
 
@@ -605,3 +607,7 @@ Shopping mall Project 2024-04-07
 ### 81 Day
 
 Shopping mall Project 2024-04-08
+
+### 82 Day
+
+Shopping mall Project 2024-04-09
