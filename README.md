@@ -579,10 +579,13 @@ Security 2024-04-01
 - CSRF attack
 - SameSite Cookie
 - XSS attack
+- xss package
+- SQL injection
+- Don't expose backend code
 
 ### 75 Day
 
-Security 2024-04-02
+Clean Code & MVC 2024-04-02
 
 ### 76 Day
 
@@ -615,3 +618,27 @@ Shopping mall Project 2024-04-08
 ### 82 Day
 
 Shopping mall Project 2024-04-09
+
+### 83 Day
+
+Shopping mall Project 2024-04-10
+
+### 84 Day
+
+Shopping mall Project 2024-04-11
+
+### 85 Day
+
+Shopping mall Project 2024-04-12
+
+### 86 Day
+
+Shopping mall Project 2024-04-13
+
+### 87 Day
+
+Shopping mall Project 2024-04-14
+
+### 88 Day
+
+Shopping mall Project 2024-04-15
