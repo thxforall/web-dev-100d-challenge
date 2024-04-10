@@ -585,11 +585,13 @@ Security 2024-04-01
 
 ### 75 Day
 
-Clean Code & MVC 2024-04-02
+Refactoring 2024-04-02
+
+-
 
 ### 76 Day
 
-Session 2024-04-03
+Refactorign & MVC 2024-04-03
 
 ### 76 Day
 
