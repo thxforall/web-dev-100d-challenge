@@ -1,123 +1,26 @@
 import express from 'express';
 
-import { Post } from '../model/post.js';
+import {
+  getHome,
+  getAdmin,
+  createPost,
+  getSinglePost,
+  updatePost,
+  postDelete,
+} from '../controllers/post-controllers.js';
 
 const router = express.Router();
 
-router.get('/', function (req, res) {
-  res.render('welcome');
-});
+router.get('/', getHome);
 
-router.get('/admin', async function (req, res) {
-  if (!res.locals.isAuth) {
-    return res.status(401).render('401');
-  }
+router.get('/admin', getAdmin);
 
-  const posts = await Post.fetchAll();
+router.post('/posts', createPost);
 
-  let sessionInputData = req.session.inputData;
+router.get('/posts/:id([0-9a-z]{24})/edit', getSinglePost);
 
-  if (!sessionInputData) {
-    sessionInputData = {
-      hasError: false,
-      title: '',
-      content: '',
-    };
-  }
+router.post('/posts/:id([0-9a-z]{24})/edit', updatePost);
 
-  req.session.inputData = null;
-
-  res.render('admin', {
-    posts: posts,
-    inputData: sessionInputData,
-  });
-});
-
-router.post('/posts', async function (req, res) {
-  const enteredTitle = req.body.title;
-  const enteredContent = req.body.content;
-
-  if (
-    !enteredTitle ||
-    !enteredContent ||
-    enteredTitle.trim() === '' ||
-    enteredContent.trim() === ''
-  ) {
-    req.session.inputData = {
-      hasError: true,
-      message: 'Invalid input - please check your data.',
-      title: enteredTitle,
-      content: enteredContent,
-    };
-
-    res.redirect('/admin');
-    return; // or return res.redirect('/admin'); => Has the same effect
-  }
-
-  const post = new Post(enteredTitle, enteredContent);
-  await post.save();
-
-  res.redirect('/admin');
-});
-
-router.get('/posts/:id/edit', async function (req, res) {
-  const post = new Post(null, null, req.params.id);
-  await post.fetch();
-
-  if (!post.title || !post.title) {
-    return res.render('404'); // 404.ejs is missing at this point - it will be added later!
-  }
-
-  let sessionInputData = req.session.inputData;
-
-  if (!sessionInputData) {
-    sessionInputData = {
-      hasError: false,
-      title: post.title,
-      content: post.content,
-    };
-  }
-
-  req.session.inputData = null;
-
-  res.render('single-post', {
-    post: post,
-    inputData: sessionInputData,
-  });
-});
-
-router.post('/posts/:id/edit', async function (req, res) {
-  const enteredTitle = req.body.title;
-  const enteredContent = req.body.content;
-
-  if (
-    !enteredTitle ||
-    !enteredContent ||
-    enteredTitle.trim() === '' ||
-    enteredContent.trim() === ''
-  ) {
-    req.session.inputData = {
-      hasError: true,
-      message: 'Invalid input - please check your data.',
-      title: enteredTitle,
-      content: enteredContent,
-    };
-
-    res.redirect(`/posts/${req.params.id}/edit`);
-    return;
-  }
-
-  const post = new Post(enteredTitle, enteredContent, req.params.id);
-  await post.save();
-
-  res.redirect('/admin');
-});
-
-router.post('/posts/:id/delete', async function (req, res) {
-  const post = new Post(null, null, req.params.id);
-  await post.delete();
-
-  res.redirect('/admin');
-});
+router.post('/posts/:id([0-9a-z]{24})/delete', postDelete);
 
 export { router as blogRoutes };

@@ -1,5 +1,4 @@
 import mongodb from 'mongodb';
-
 import { getDb } from '../data/database.js';
 
 const ObjectId = mongodb.ObjectId;
