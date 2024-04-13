@@ -1,6 +1,7 @@
 import express from 'express';
 import bcrypt from 'bcryptjs';
 
+import { getSessionErrorData } from '../util/validation-session.js';
 import { getDb } from '../data/database.js';
 
 const router = express.Router();
@@ -10,38 +11,26 @@ router.get('/', function (req, res) {
 });
 
 router.get('/signup', function (req, res) {
-  let sessionInputData = req.session.inputData;
-
-  if (!sessionInputData) {
-    sessionInputData = {
-      hasError: false,
-      email: '',
-      confirmEmail: '',
-      password: '',
-    };
-  }
-
-  req.session.inputData = null;
+  const sessionErrorData = getSessionErrorData(req, {
+    email: '',
+    confirmEmail: '',
+    password: '',
+  });
 
   res.render('signup', {
-    inputData: sessionInputData,
+    inputData: sessionErrorData,
   });
 });
 
 router.get('/login', function (req, res) {
-  let sessionInputData = req.session.inputData;
+  const sessionErrorData = getSessionErrorData(req, {
+    email: '',
+    confirmEmail: '',
+    password: '',
+  });
 
-  if (!sessionInputData) {
-    sessionInputData = {
-      hasError: false,
-      email: '',
-      password: '',
-    };
-  }
-
-  req.session.inputData = null;
   res.render('login', {
-    inputData: sessionInputData,
+    inputData: sessionErrorData,
   });
 });
 
