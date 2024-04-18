@@ -1,7 +1,8 @@
 {
   "name": "web-dev-100d-challenge",
   "scripts": {
-    "dev": "nodemon --exec babel-node app.js"
+    "dev": "nodemon --exec babel-node app.js",
+    "watch": "sass --watch public/src:public/dest"
   },
   "author": "Kiyori",
   "devDependencies": {
@@ -21,6 +22,7 @@
     "mongodb": "^6.5.0",
     "multer": "^1.4.5-lts.1",
     "mysql2": "^3.9.2",
+    "node-sass-middleware": "^1.1.0",
     "npm": "^10.5.2",
     "sass": "^1.75.0",
     "start": "^5.1.0"

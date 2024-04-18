@@ -1,1 +1,35 @@
-<%- include('../includes/head') %>
+<%- include('../includes/head', { pageTitle : 'SignUp'}) %>
+</head>
+<body>
+  <%- include('../includes/header') %>
+  <main>
+    <h1>SignUp</h1>
+    <p>test</p>
+    <form action="/signup" method="POST">
+      <ul>
+        <li>
+          <input type="email" name="email" id="email" placeholder="Email" />
+        </li>
+        <li>
+          <input type="email" name="confirm-email" id="confirm-email" placeholder="Confrim Email">
+        </li>
+        <li>
+          <input type="password" name="password" id="password" placeholder="****">
+        </li>
+        <li>
+          <input type="text" name="fullName" id="fullName" placeholder="Name">
+        </li>
+        <li>
+          <input type="text" name="street" id="street" placeholder="street">
+        </li>
+        <li>
+          <input type="text" name="postal" id="postal" placeholder="postal" maxlength="5" minlength="5">
+        </li>
+        <li>
+          <input type="text" name="city" id="city" placeholder="city" >
+        </li>
+      </ul>
+      <button type="submit">Create Account</button>
+    </form>
+  </main>
+<%- include('../includes/footer') %>
