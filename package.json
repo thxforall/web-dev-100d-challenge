@@ -1,11 +1,7 @@
 {
   "name": "web-dev-100d-challenge",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "main": "app.js",
   "scripts": {
-    "start": "nodemon --exec babel-node app.js"
+    "dev": "nodemon --exec babel-node app.js"
   },
   "author": "Kiyori",
   "devDependencies": {
@@ -26,6 +22,7 @@
     "multer": "^1.4.5-lts.1",
     "mysql2": "^3.9.2",
     "npm": "^10.5.2",
+    "sass": "^1.75.0",
     "start": "^5.1.0"
   }
 }
