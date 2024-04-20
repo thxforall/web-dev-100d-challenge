@@ -8,8 +8,23 @@
 
   .header__nav {
     display: grid;
-    grid-template-columns: auto;
+    justify-content: space-between;
+    grid-template-columns: 1fr 5fr;
+    column-gap: variables.$space-6;
+    width: 100%;
+
+    .header__nav-icon {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header__nav-list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+
   }
-
-
 }

@@ -6,7 +6,20 @@
 }
 .header .header__nav {
   display: grid;
-  grid-template-columns: auto;
+  justify-content: space-between;
+  grid-template-columns: 1fr 5fr;
+  column-gap: 1.5rem;
+  width: 100%;
+}
+.header .header__nav .header__nav-icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .header__nav .header__nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /*# sourceMappingURL=nav.css.map */

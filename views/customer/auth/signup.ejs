@@ -1,37 +1,40 @@
 <%- include('../includes/head', { pageTitle : 'SignUp'}) %>
-<!-- <link rel="stylesheet" href="css/component/nav.css" />
-<link rel="stylesheet" href="css/page/signup.css" /> -->
+<link rel="stylesheet" href="dest/css/component/forms.css">
+<link rel="stylesheet" href="dest/css/page/signup.css" />
+
+
 </head>
 <body>
   <%- include('../includes/header') %>
-  <main>
-    <h1>SignUp</h1>
-    <p>test</p>
-    <form action="/signup" method="POST">
-      <ul>
-        <li>
+  <main class="signup-main">
+    <h1 class="signup-form-title">Play With</h1>
+    <form action="/signup" method="POST" class="global-form signup-form">
+      <ul class="form-list">
+        <li class="form-list-item">
           <input type="email" name="email" id="email" placeholder="Email" />
         </li>
-        <li>
+        <li class="form-list-item">
           <input type="email" name="confirm-email" id="confirm-email" placeholder="Confrim Email">
         </li>
-        <li>
+        <li class="form-list-item">
           <input type="password" name="password" id="password" placeholder="****">
         </li>
-        <li>
+        <li class="form-list-item">
           <input type="text" name="fullName" id="fullName" placeholder="Name">
         </li>
-        <li>
+        <li class="form-list-item">
           <input type="text" name="street" id="street" placeholder="street">
         </li>
-        <li>
+        <li class="form-list-item">
           <input type="text" name="postal" id="postal" placeholder="postal" maxlength="5" minlength="5">
         </li>
-        <li>
+        <li class="form-list-item">
           <input type="text" name="city" id="city" placeholder="city" >
         </li>
+        <li class="form-list-item">
+        <button type="submit" class="form-btn">Create Account</button>
+      </li>
       </ul>
-      <button type="submit">Create Account</button>
       <p><a href="/login">Login in</a></p>
     </form>
   </main>
