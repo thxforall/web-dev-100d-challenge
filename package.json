@@ -3,7 +3,7 @@
   "scripts": {
     "watch": "sass --watch public/pre:public/dest",
     "nodemon": "nodemon --exec babel-node init.js",
-    "dev" : "npm-run-all --parallel watch nodemon"
+    "dev": "npm-run-all --parallel watch nodemon"
   },
   "author": "Kiyori",
   "devDependencies": {
