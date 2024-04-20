@@ -1,18 +1,21 @@
 import express from 'express';
+import morgan from 'morgan';
 import nodeSassMiddleware from 'node-sass-middleware';
 
-import { authRoutes } from './routes/auth.routes';
-
-const PORT = 3000;
+import globalRouter from './routes/global.routes';
+import authRouter from './routes/auth.routes';
 
 const app = express();
+const logger = morgan('dev');
 
 app.set('view engine', 'ejs');
 app.set('views', process.cwd() + '/views');
+app.use(logger);
+app.use(express.urlencoded({ extended: true }));
 
 app.use(
   nodeSassMiddleware({
-    src: process.cwd() + '/public/src',
+    src: process.cwd() + '/public/pre',
     dest: process.cwd() + '/public/dest',
     debug: true,
     outputStyle: 'compressed',
@@ -20,8 +23,7 @@ app.use(
 );
 app.use(express.static('public'));
 
-app.use(authRoutes);
+app.use('/', globalRouter);
+app.use('/auth', authRouter);
 
-app.listen(PORT, () => {
-  console.log(`Welcome to http://localhost:${PORT} 🚀`);
-});
+export default app;

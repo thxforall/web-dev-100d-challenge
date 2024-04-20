@@ -1,7 +1,7 @@
 {
   "name": "web-dev-100d-challenge",
   "scripts": {
-    "dev": "nodemon --exec babel-node app.js",
+    "dev": "nodemon --exec babel-node init.js",
     "watch": "sass --watch public/src:public/dest"
   },
   "author": "Kiyori",
@@ -9,6 +9,7 @@
     "@babel/core": "^7.24.0",
     "@babel/node": "^7.23.9",
     "@babel/preset-env": "^7.24.0",
+    "eslint-config-prettier": "^9.1.0",
     "nodemon": "^3.1.0"
   },
   "dependencies": {
@@ -20,6 +21,7 @@
     "express": "^4.18.3",
     "express-session": "^1.18.0",
     "mongodb": "^6.5.0",
+    "morgan": "^1.10.0",
     "multer": "^1.4.5-lts.1",
     "mysql2": "^3.9.2",
     "node-sass-middleware": "^1.1.0",
