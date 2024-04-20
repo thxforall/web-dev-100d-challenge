@@ -1,1 +1,12 @@
-h1{color:red}p{color:red}
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 1rem;
+}
+.header .header__nav {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+/*# sourceMappingURL=nav.css.map */

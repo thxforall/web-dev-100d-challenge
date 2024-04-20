@@ -8,20 +8,21 @@ import authRouter from './routes/auth.routes';
 const app = express();
 const logger = morgan('dev');
 
+// app.use(
+//   nodeSassMiddleware({
+//     src: process.cwd() + '/public/pre/css',
+//     dest: process.cwd() + '/public/dest/css',
+//     debug: true,
+//     outputStyle: 'compressed',
+//   }),
+// );
+
 app.set('view engine', 'ejs');
 app.set('views', process.cwd() + '/views');
 app.use(logger);
+app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 
-app.use(
-  nodeSassMiddleware({
-    src: process.cwd() + '/public/pre',
-    dest: process.cwd() + '/public/dest',
-    debug: true,
-    outputStyle: 'compressed',
-  }),
-);
-app.use(express.static('public'));
 
 app.use('/', globalRouter);
 app.use('/auth', authRouter);

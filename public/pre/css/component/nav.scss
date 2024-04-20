@@ -1,8 +1,15 @@
-$color: red;
+@use 'variables';
 
-h1 {
-  color: $color;
-}
-p {
-  color: $color;
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0  variables.$space-4;
+
+  .header__nav {
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+
 }
