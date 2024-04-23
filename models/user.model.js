@@ -24,6 +24,20 @@ class User {
       address: this.address,
     });
   }
+
+  async userCheck() {
+    const hashedPassword = await bcrypt.hash(this.password, 12);
+
+    const existingUser = await getDb().collection('users').findOne({
+      email: this.email,
+      password: hashedPassword,
+    });
+
+    if(!existingUser) {
+        return;
+    }
+    // session
+  }
 }
 
 export default User;

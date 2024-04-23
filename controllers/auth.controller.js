@@ -23,3 +23,13 @@ export async function postSignup(req, res) {
 export function getLogin(req, res) {
   res.render('customer/auth/login');
 }
+
+export async function postLogin(req, res) {
+  const inputData = req.body;
+  const user = new User(
+    inputData.email,
+    inputData.password
+  );
+
+  res.redirect('customer/home');
+}

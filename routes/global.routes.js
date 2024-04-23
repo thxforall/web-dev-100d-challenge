@@ -4,6 +4,7 @@ import {
   getSignUp,
   getLogin,
   postSignup,
+  postLogin,
 } from '../controllers/auth.controller';
 
 const globalRouter = express.Router();
@@ -13,6 +14,6 @@ globalRouter.get('/', (req, res) => {
 });
 
 globalRouter.route('/signup').get(getSignUp).post(postSignup);
-globalRouter.get('/login', getLogin);
+globalRouter.route('/login').get(getLogin).post(postLogin);
 
 export default globalRouter;

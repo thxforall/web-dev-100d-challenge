@@ -1,19 +1,16 @@
 <%- include('../includes/head', { pageTitle : 'Login'}) %>
 <link rel="stylesheet" href="dest/css/component/forms.css">
-<link rel="stylesheet" href="dest/css/page/signup.css" />
+<link rel="stylesheet" href="dest/css/page/login.css" />
 
 </head>
 <body>
   <%- include('../includes/header') %>
-  <main class="signup-main">
-    <h1 class="signup-form-title">Play With</h1>
-    <form action="/signup" method="POST" class="global-form signup-form">
+  <main class="login-main form-main">
+    <h1 class="login-form-title">Play With</h1>
+    <form action="/login" method="POST" class="global-form login-form">
       <ul class="form-list">
         <li class="form-list-item">
           <input type="email" name="email" id="email" placeholder="Email" />
-        </li>
-        <li class="form-list-item">
-          <input type="email" name="confirm-email" id="confirm-email" placeholder="Confrim Email">
         </li>
         <li class="form-list-item">
           <input type="password" name="password" id="password" placeholder="****">
@@ -22,7 +19,7 @@
         <button type="submit" class="form-btn">Login</button>
       </li>
       </ul>
-      <p><a href="/signup">Create New User</a></p>
+      <p><a href="/login">Create New User</a></p>
     </form>
   </main>
 <%- include('../includes/footer') %>
