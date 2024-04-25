@@ -33,11 +33,20 @@ class User {
       password: hashedPassword,
     });
 
+    // user check id and password return home
     if(!existingUser) {
         return;
     }
+
+
     // session
   }
+
+    // logout
+    
+    // user check with signup
+
+    
 }
 
 export default User;
