@@ -1,11 +1,11 @@
-<%- include('../includes/head', { pageTitle : 'SignUp'}) %>
+<%- include('../../shared/includes/head', { pageTitle : 'SignUp'}) %>
 <link rel="stylesheet" href="dest/css/component/forms.css">
 <link rel="stylesheet" href="dest/css/page/signup.css" />
 
 
 </head>
 <body>
-  <%- include('../includes/header') %>
+  <%- include('../../shared/includes/header') %>
   <main class="signup-main form-main">
     <h1 class="signup-form-title">Play With</h1>
     <form action="/signup" method="POST" class="global-form signup-form">
@@ -38,4 +38,4 @@
       <p><a href="/login">Login in</a></p>
     </form>
   </main>
-<%- include('../includes/footer') %>
+<%- include('../../shared/includes/footer') %>
