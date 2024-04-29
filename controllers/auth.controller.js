@@ -1,11 +1,14 @@
 import User from '../models/user.model';
-import { createUserSession } from '../util/authentication';
+import {
+  createUserSession,
+  deleteUserAuthSession,
+} from '../util/authentication';
 
 export function getSignUp(req, res) {
   res.render('customer/auth/signup');
 }
 
-export async function postSignup(req, res) {
+export async function postSignup(req, res, next) {
   const inputData = req.body;
   const user = new User(
     inputData.email,
@@ -16,7 +19,11 @@ export async function postSignup(req, res) {
     inputData.city,
   );
 
-  await user.signUp();
+  try {
+    await user.signUp();
+  } catch (error) {
+    next(error);
+  }
 
   res.redirect('/login');
 }
@@ -47,4 +54,9 @@ export async function postLogin(req, res) {
   createUserSession(req, existingUser, function () {
     res.redirect('/');
   });
+}
+
+export function logout(req, res) {
+  deleteUserAuthSession(req);
+  res.redirect('/');
 }

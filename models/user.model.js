@@ -33,8 +33,6 @@ class User {
     });
   }
 
-  // logout
-
   // user check with signup
 }
 

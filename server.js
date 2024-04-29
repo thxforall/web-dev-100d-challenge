@@ -4,10 +4,13 @@ import expressSession from 'express-session';
 
 import { createSessionConfig } from './config/session';
 import { connectToDatabase } from './data/database';
+
 import globalRouter from './routes/global.routes';
 import authRouter from './routes/auth.routes';
 import productRouter from './routes/products.routes';
+
 import { handleErrors } from './middlewares/error-handler';
+import { checkAuthStatus } from './middlewares/check-auth';
 
 const app = express();
 const logger = morgan('dev');
@@ -22,6 +25,7 @@ app.use(logger);
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 
+app.use(checkAuthStatus);
 app.use('/', globalRouter);
 app.use('/auth', authRouter);
 app.use('/products', productRouter);
