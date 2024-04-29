@@ -1,7 +1,7 @@
 import session from 'express-session';
 import MongoDBStore from 'connect-mongodb-session';
 
-function createSessionStore(session) {
+function createSessionStore() {
   const MongoDBStoreSession = MongoDBStore(session);
 
   const store = new MongoDBStoreSession({
@@ -18,7 +18,7 @@ export function createSessionConfig() {
     secret: 'super-secret',
     resave: false,
     saveUninitialized: false,
-    store: createSessionStore(session),
+    store: createSessionStore(),
     cookie: {
       maxAge: 2 * 24 * 60 * 60 * 1000,
     },

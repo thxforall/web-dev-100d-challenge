@@ -14,6 +14,14 @@ class User {
     };
   }
 
+  getUserWithSameEmail() {
+    return getDb().collection('users').findOne({ email: this.email });
+  }
+
+  hasMatchingPassword(hashedPassword) {
+    return bcrypt.compare(this.password, hashedPassword);
+  }
+
   async signUp() {
     const hashedPassword = await bcrypt.hash(this.password, 12);
 
@@ -25,28 +33,9 @@ class User {
     });
   }
 
-  async userCheck() {
-    const hashedPassword = await bcrypt.hash(this.password, 12);
+  // logout
 
-    const existingUser = await getDb().collection('users').findOne({
-      email: this.email,
-      password: hashedPassword,
-    });
-
-    // user check id and password return home
-    if(!existingUser) {
-        return;
-    }
-
-
-    // session
-  }
-
-    // logout
-    
-    // user check with signup
-
-    
+  // user check with signup
 }
 
 export default User;

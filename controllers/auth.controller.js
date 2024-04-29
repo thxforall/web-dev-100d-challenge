@@ -1,4 +1,5 @@
 import User from '../models/user.model';
+import { createUserSession } from '../util/authentication';
 
 export function getSignUp(req, res) {
   res.render('customer/auth/signup');
@@ -26,10 +27,24 @@ export function getLogin(req, res) {
 
 export async function postLogin(req, res) {
   const inputData = req.body;
-  const user = new User(
-    inputData.email,
-    inputData.password
+  const user = new User(inputData.email, inputData.password);
+  const existingUser = await user.getUserWithSameEmail();
+
+  if (!existingUser) {
+    res.redirect('/login');
+    return;
+  }
+
+  const passwordIsMatched = await user.hasMatchingPassword(
+    existingUser.password,
   );
 
-  res.redirect('customer/home');
+  if (!passwordIsMatched) {
+    res.redirect('/login');
+    return;
+  }
+
+  createUserSession(req, existingUser, function () {
+    res.redirect('/');
+  });
 }
