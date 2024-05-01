@@ -3,6 +3,7 @@ import {
   createUserSession,
   deleteUserAuthSession,
 } from '../util/authentication';
+import { emailIsConfirmed, inputDetailsAreValid } from '../util/validation';
 
 export function getSignUp(req, res) {
   res.render('customer/auth/signup');
@@ -18,6 +19,21 @@ export async function postSignup(req, res, next) {
     inputData.postal,
     inputData.city,
   );
+
+  if (
+    !inputDetailsAreValid(
+      inputData.email,
+      inputData.password,
+      inputData.fullName,
+      inputData.street,
+      inputData.postal,
+      inputData.city,
+    ) ||
+    emailIsConfirmed(inputData.email, inputData['confirm-email'])
+  ) {
+    res.redirect('/signup');
+    return;
+  }
 
   try {
     await user.signUp();
