@@ -18,7 +18,6 @@ export function inputDetailsAreValid(
 ) {
   const valid =
     userCredentialsAreValid(email, password) &&
-    userCredentialsAreValid &&
     isEmpty(name) &&
     isEmpty(street) &&
     isEmpty(postal) &&
