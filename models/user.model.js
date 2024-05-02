@@ -18,6 +18,11 @@ class User {
     return getDb().collection('users').findOne({ email: this.email });
   }
 
+  async existingAlready() {
+    const existingUser = this.getUserWithSameEmail();
+    return existingUser ? true : false;
+  }
+
   hasMatchingPassword(hashedPassword) {
     return bcrypt.compare(this.password, hashedPassword);
   }
@@ -32,8 +37,6 @@ class User {
       address: this.address,
     });
   }
-
-  // user check with signup
 }
 
 export default User;
