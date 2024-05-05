@@ -36,30 +36,30 @@ export async function postSignup(req, res, next) {
     city: inputData.city,
   };
 
-  // if (
-  //   !inputDetailsAreValid(
-  //     inputData.email,
-  //     inputData.password,
-  //     inputData.fullName,
-  //     inputData.street,
-  //     inputData.postal,
-  //     inputData.city,
-  //   ) ||
-  //   emailIsConfirmed(inputData.email, inputData['confirm-email'])
-  // ) {
-  //   flashDataToSession(
-  //     req,
-  //     {
-  //       errorMessage: 'Please Check yout input. Password ...',
-  //       ...enteredData,
-  //     },
-  //     function () {
-  //       res.redirect('/signup');
-  //     },
-  //   );
-  //   return;
-  // }
-  
+  if (
+    !inputDetailsAreValid(
+      inputData.email,
+      inputData.password,
+      inputData.fullName,
+      inputData.street,
+      inputData.postal,
+      inputData.city,
+    ) ||
+    !emailIsConfirmed(inputData.email, inputData['confirm-email'])
+  ) {
+    flashDataToSession(
+      req,
+      {
+        errorMessage: 'Please Check yout input. Password ...',
+        ...enteredData,
+      },
+      function () {
+        res.redirect('/signup');
+      },
+    );
+    return;
+  }
+
   const user = new User(
     inputData.email,
     inputData.password,
@@ -87,7 +87,6 @@ export async function postSignup(req, res, next) {
     }
 
     await user.signUp();
-
   } catch (error) {
     next(error);
   }
@@ -101,7 +100,6 @@ export function getLogin(req, res) {
   if (!sessionData) {
     sessionData = { email: '', password: '' };
   }
-
   res.render('customer/auth/login', { inputData: sessionData });
 }
 
@@ -111,7 +109,7 @@ export async function postLogin(req, res, next) {
   let existingUser;
 
   try {
-    existingUser = user.getUserWithSameEmail;
+    existingUser = user.getUserWithSameEmail();
   } catch (error) {
     next(error);
     return;
@@ -119,8 +117,8 @@ export async function postLogin(req, res, next) {
 
   const sessionErrorData = {
     errorMessage: 'Please double Check your email, password',
-    email: user.email,
-    pasword: user.password,
+    email: inputData.email,
+    password: inputData.password,
   };
 
   if (!existingUser) {

@@ -19,12 +19,16 @@ class User {
   }
 
   async existingAlready() {
-    const existingUser = this.getUserWithSameEmail();
+    const existingUser = await this.getUserWithSameEmail();
     return existingUser ? true : false;
   }
 
-  hasMatchingPassword(hashedPassword) {
-    return bcrypt.compare(this.password, hashedPassword);
+  async hasMatchingPassword(hashedPassword) {
+    try {
+      return await bcrypt.compare(this.password, hashedPassword);
+    } catch (error) {
+      throw new Error('Error comparing passwords: ' + error.message);
+    }
   }
 
   async signUp() {

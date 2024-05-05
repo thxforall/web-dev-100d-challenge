@@ -18,10 +18,10 @@ export function inputDetailsAreValid(
 ) {
   const valid =
     userCredentialsAreValid(email, password) &&
-    isEmpty(name) &&
-    isEmpty(street) &&
-    isEmpty(postal) &&
-    isEmpty(city);
+    !isEmpty(name) &&
+    !isEmpty(street) &&
+    !isEmpty(postal) &&
+    !isEmpty(city);
   return valid;
 }
 
