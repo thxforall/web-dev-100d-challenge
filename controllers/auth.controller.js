@@ -109,16 +109,16 @@ export async function postLogin(req, res, next) {
   let existingUser;
 
   try {
-    existingUser = user.getUserWithSameEmail();
+    existingUser = await user.getUserWithSameEmail();
   } catch (error) {
     next(error);
     return;
   }
 
   const sessionErrorData = {
-    errorMessage: 'Please double Check your email, password',
-    email: inputData.email,
-    password: inputData.password,
+    errorMessage: 'Invalid credentials - please double check your email adn password',
+    email: user.email,
+    password: user.password,
   };
 
   if (!existingUser) {
