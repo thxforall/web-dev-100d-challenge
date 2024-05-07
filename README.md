@@ -4,7 +4,6 @@
 
 # Back to Basic
 
-2024-01-19 ~
 
 View
 
