@@ -7,6 +7,7 @@ import { connectToDatabase } from './data/database';
 
 import globalRouter from './routes/global.routes';
 import authRouter from './routes/auth.routes';
+import adminRotuer from './routes/admin.routes';
 import productRouter from './routes/products.routes';
 
 import { handleErrors } from './middlewares/error-handler';
@@ -28,6 +29,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(checkAuthStatus);
 app.use('/', globalRouter);
 app.use('/auth', authRouter);
+app.use('/admin', adminRotuer);
 app.use('/products', productRouter);
 app.use(handleErrors);
 

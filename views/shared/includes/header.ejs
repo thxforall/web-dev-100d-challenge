@@ -8,10 +8,10 @@
       <li class="header__nav-list__item">
         <a href="/">HOME</a>
       </li>
-      <li class="header__nav-list__item">TOP GAMES</li>
-      <li class="header__nav-list__item">SHOP</li>
-
+      
       <% if(locals.isAuth && !locals.isAdmin) { %>
+        <li class="header__nav-list__item">TOP GAMES</li>
+        <li class="header__nav-list__item">SHOP</li>
       <li class="header__nav-list__item">
         <a href="/cart"> CART </a>
       </li>
