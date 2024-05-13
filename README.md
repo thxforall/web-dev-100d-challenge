@@ -8,16 +8,16 @@
 View
 
 1. customer
-   1. signup / login
-   2. All products
+   1. signup / login O
+   2. All products O
    3. products detail
    4. shopping cart
    5. all order for customer
 2. admin
-   1. signup / login
+   1. signup / login Os
    2. dashboard
    3. all products
-   4. new products
+   4. new products Os
    5. update products
    6. all orders
 
