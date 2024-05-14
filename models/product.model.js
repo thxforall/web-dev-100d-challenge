@@ -8,24 +8,32 @@ class Product {
     this.price = +productData.price;
     this.description = productData.description;
     this.image = productData.image;
-    this.imagePath = `product-data/images/${productData.image}`;
-    this.imageUrl = `/products/assets/images/${productData.image}`;
+    this.updateImageData();
     if (productData._id) {
       this.id = productData._id.toString();
     }
   }
 
   static async findById(productId) {
-    const prodId = new ObjectId(productId);
+    let prodId;
+    try {
+      prodId = new ObjectId(productId);
+    } catch (error) {
+      error.code = 404;
+      throw error;
+    }
     const product = await getDb()
       .collection('products')
       .findOne({ _id: prodId });
+
+    console.log(product);
+
     if (!product) {
       const error = new Error('Could not find product with provided id');
       error.code = 404;
       throw error;
     }
-    return product;
+    return new Product(product);
   }
 
   static async findAll() {
@@ -36,6 +44,11 @@ class Product {
     });
   }
 
+  async updateImageData() {
+    this.imagePath = `product-data/images/${this.image}`;
+    this.imageUrl = `/products/assets/images/${this.image}`;
+  }
+
   async save() {
     const productData = {
       title: this.title,
@@ -44,7 +57,18 @@ class Product {
       description: this.description,
       image: this.image,
     };
-    await getDb().collection('products').insertOne(productData);
+
+    if (this.id) {
+      const productId = new ObjectId(this.id);
+      if (!this.image) {
+        delete productData.image;
+      }
+      await getDb()
+        .collection('products')
+        .updateOne({ _id: productId }, { $set: productData });
+    } else {
+      await getDb().collection('products').insertOne(productData);
+    }
   }
 }
 

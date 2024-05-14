@@ -4,6 +4,6 @@
     <body>
         <%- include('../../shared/includes/header') %>
         <h1>Update Product</h1>
-        <%- include('includes/product-form', { submitPath : 'admin/products/' + product.id }) %>
+        <%- include('includes/product-form', { submitPath : '/admin/products/' + product.id , product , imageRequired : false  }) %>
 
 <%- include('../../shared/includes/footer') %>
