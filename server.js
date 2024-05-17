@@ -22,6 +22,7 @@ app.set('views', process.cwd() + '/views');
 
 app.use(expressSession(sessionConfig));
 app.use(logger);
+app.use(express.json());
 
 app.use(express.static('public'));
 app.use('/products/assets' , express.static('product-data'));

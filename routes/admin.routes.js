@@ -16,6 +16,6 @@ adminRotuer
   .get(getProducts)
   .post(configureMulterMiddleware, createNewProduct);
 adminRotuer.route('/products/new').get(getNewProduct);
-adminRotuer.route('/products/:id').get(getUpdateProduct).post(updateProduct);
+adminRotuer.route('/products/:id').get(getUpdateProduct).post(configureMulterMiddleware, updateProduct);
 
 export default adminRotuer;
