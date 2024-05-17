@@ -70,6 +70,16 @@ class Product {
       await getDb().collection('products').insertOne(productData);
     }
   }
+
+  async replaceImage(newImage) {
+    this.image = newImage;
+    this.updateImageData();
+  }
+
+  remove() {
+    const productId = new ObjectId(this.id)
+    return getDb().collection('products').deleteOne({ _id: productId });
+  }
 }
 
 export default Product;

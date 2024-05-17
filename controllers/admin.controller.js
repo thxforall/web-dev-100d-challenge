@@ -43,7 +43,7 @@ export async function updateProduct(req, res, next) {
   });
 
   if (req.file) {
-    product.replaceImage(req.file.filenmae);
+    product.replaceImage(req.file.filename);
   }
 
   try {
