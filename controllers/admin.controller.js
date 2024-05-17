@@ -55,3 +55,15 @@ export async function updateProduct(req, res, next) {
 
   res.redirect('/admin/products');
 }
+
+export async function deleteProducts(req, res, next) {
+  try {
+    const product = await Product.findById(req.params.id);
+    product.remove();
+  } catch (error) {
+    next(error);
+    return;
+  }
+
+  res.redirect('/admin/products');
+}
