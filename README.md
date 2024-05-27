@@ -4,7 +4,6 @@
 
 # Back to Basic
 
-
 View
 
 1. customer
@@ -27,3 +26,10 @@ Models
 2. product - name, summary, price, image, description
 3. cart - session / item, total price, number of items
 4. order - user data, products / cart data, date, status
+
+
+<!-- reference -->
+- https://www.youtube.com/watch?v=YDCCauu4lIk 
+- https://dribbble.com/shots/21705276-Game-Store    Vitali Darozhka
+
+- 
