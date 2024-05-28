@@ -4,20 +4,16 @@
       <img src="" alt="" />
       <h1>GAME</h1>
     </span>
-    <ul class="header__nav-list">
-      <li class="header__nav-list__item">
-        <a href="/">HOME</a>
-      </li>
-      
+    <ul class="header__nav-list">      
       <% if(locals.isAuth && !locals.isAdmin) { %>
-        <li class="header__nav-list__item">TOP GAMES</li>
-        <li class="header__nav-list__item">SHOP</li>
-      <li class="header__nav-list__item">
-        <a href="/cart"> CART </a>
-      </li>
-      <li class="header__nav-list__item">
-        <a href="/orders"> ORDERS </a>
-      </li>
+        <li class="header__nav-list__item">Store</li>
+        <li class="header__nav-list__item">Search Bar</li>
+        <li class="header__nav-list__item">
+          <a href="/cart"> CART </a>
+        </li>
+        <li class="header__nav-list__item">
+          <a href="/orders"> ORDERS </a>
+        </li>
       <% } %> <% if(locals.isAdmin) { %>
       <li class="header__nav-list__btn">
         <a href="/admin/products">Manage Products</a>
