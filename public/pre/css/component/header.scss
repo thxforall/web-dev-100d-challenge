@@ -4,7 +4,13 @@
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 0  variables.$space-4;
+  height: auto;
+  padding: 0 variables.$space-4;
+  margin: variables.$space-4;
+
+  .header__nav-logo img {
+    width: 5rem;
+  }
 
   .header__nav {
     display: grid;
@@ -23,8 +29,29 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      .header__nav-list__item {
+        font-size: 1.5rem;
+
+        .input-box {
+          display: flex;
+          justify-content: center;
+          width: 15rem;
+
+          svg {
+            width: 2rem;
+          }
+
+          input {
+            font-size: 1.5rem;
+            width: 6rem;
+            outline: none;
+            border: none;
+            background: none;
+            border-radius: 3rem;
+          }
+        }
+      }
     }
-
-
   }
 }
