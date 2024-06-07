@@ -5,14 +5,9 @@
   align-items: center;
   width: inherit;
   height: auto;
-  padding: 0 .25rem;
-  margin: .25rem;
-
-  .header__nav-logo {
-    img {
-      width: 8rem;
-    }
-  }
+  padding: 0 0.25rem;
+  margin: 0.25rem;
+  font-weight: 2 00;
 
   .header__nav {
     display: grid;
@@ -20,17 +15,18 @@
     justify-items: end;
     width: 100%;
 
-    .header__nav-icon {
-      display: flex;
-      align-items: center;
+    .nav__logo {
+      img {
+        width: 8rem;
+      }
     }
 
-    .header__nav-list {
+    .header__list {
       display: flex;
       gap: 3rem;
       align-items: center;
 
-      .header__nav-list__item {
+      .nav__item {
         font-size: 1.5rem;
 
         .input-box {
