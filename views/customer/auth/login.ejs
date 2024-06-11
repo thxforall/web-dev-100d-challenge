@@ -5,27 +5,32 @@
 </head>
 <body>
   <%- include('../../shared/includes/header') %>
-  <main class="login-main form-main">
-    <h1 class="login-form-title">Play With</h1>
-    <% if (inputData.errorMessage) { %>
-      <section class="alret">
-          <h2>Invalid Input</h2>
-          <p><%=inputData.errorMessage %></p>
-      </section>
-    <% } %>
-    <form action="/login" method="POST" class="global-form login-form">
-      <ul class="form-list">
-        <li class="form-list-item">
-          <input type="email" name="email" id="email" placeholder="Email" value="<%= inputData.email %>" />
+
+  <main class="auth-main">
+    <section class="auth__image-section">
+    </section>
+    <section class="form-section">
+      <img src="/image/logo.png" class="logo logo--title" alt="logo">
+      <% if (inputData.errorMessage) { %>
+        <section class="alret">
+            <h2>Invalid Input</h2>
+            <p><%=inputData.errorMessage %></p>
+        </section>
+      <% } %>
+      <form action="/login" method="POST" class="global-form login-form">
+        <ul class="form-list">
+          <li class="form-list-item">
+            <input type="email" name="email" id="email" placeholder="Email" value="<%= inputData.email %>" />
+          </li>
+          <li class="form-list-item">
+            <input type="password" name="password" id="password" placeholder="****" value="<%= inputData.password %>">
+          </li>
+          <li class="form-list-item">
+          <button type="submit" class="common-btn form-btn">Login</button>
         </li>
-        <li class="form-list-item">
-          <input type="password" name="password" id="password" placeholder="****" value="<%= inputData.password %>">
-        </li>
-        <li class="form-list-item">
-        <button type="submit" class="form-btn">Login</button>
-      </li>
-      </ul>
-      <p><a href="/signup">Create New User</a></p>
-    </form>
+        </ul>
+        <p><a href="/signup">Create New User</a></p>
+      </form>
+    </section>
   </main>
 <%- include('../../shared/includes/footer') %>

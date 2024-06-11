@@ -9,12 +9,12 @@
 }
 .header .header__nav {
   display: grid;
-  grid-template-columns: 0.2fr 5fr;
+  grid-template-columns: 0.3fr 5fr;
   justify-items: end;
   width: 100%;
 }
 .header .header__nav .nav__logo img {
-  width: 8rem;
+  width: 12rem;
 }
 .header .header__nav .header__list {
   display: flex;

@@ -1,47 +1,52 @@
 <%- include('../../shared/includes/head', { pageTitle : 'SignUp'}) %>
 <link rel="stylesheet" href="../dest/css/component/forms.css">
+<link rel="stylesheet" href="../dest/css/page/login.css" />
 <link rel="stylesheet" href="../dest/css/page/signup.css" />
 
 
 </head>
 <body>
   <%- include('../../shared/includes/header') %>
-  <main class="signup-main form-main">
-    <h1 class="signup-form-title">Play With</h1>
-    <% if (inputData.errorMessage) { %>
-        <section class="alret">
-            <h2>Invalid Input</h2>
-            <p><%=inputData.errorMessage %></p>
-        </section>
-    <% } %>
-    <form action="/signup" method="POST" class="global-form signup-form">
-      <ul class="form-list">
-        <li class="form-list-item">
-          <input type="email" name="email" id="email" placeholder="Email" value="<%= inputData.email %>" required/>
+  <main class="auth-main">
+    <section class="auth__image-section">
+    </section>
+    <section class="form-section">
+      <img src="/image/logo.png" class="logo logo--title" alt="logo">
+      <% if (inputData.errorMessage) { %>
+          <section class="alret">
+              <h2>Invalid Input</h2>
+              <p><%=inputData.errorMessage %></p>
+          </section>
+      <% } %>
+      <form action="/signup" method="POST" class="global-form signup-form">
+        <ul class="form-list">
+          <li class="form-list-item">
+            <input type="email" name="email" id="email" placeholder="Email" value="<%= inputData.email %>" required/>
+          </li>
+          <li class="form-list-item">
+            <input type="email" name="confirm-email" id="confirm-email" placeholder="Confrim Email" value="<%= inputData.confirmEmail %>" required/>
+          </li>
+          <li class="form-list-item">
+            <input type="password" name="password" id="password" placeholder="****" value="<%= inputData.password %>" required/>
+          </li>
+          <li class="form-list-item">
+            <input type="text" name="fullName" id="fullName" placeholder="Name" value="<%= inputData.fullName %>" required/>
+          </li>
+          <li class="form-list-item">
+            <input type="text" name="street" id="street" placeholder="street" value="<%= inputData.street %>" required/>
+          </li>
+          <li class="form-list-item">
+            <input type="text" name="postal" id="postal" placeholder="postal" maxlength="5" minlength="5" value="<%= inputData.postal %>" required/>
+          </li>
+          <li class="form-list-item">
+            <input type="text" name="city" id="city" placeholder="city" value="<%= inputData.city %>" required/>
+          </li>
+          <li class="form-list-item">
+          <button type="submit" class="form-btn">Create Account</button>
         </li>
-        <li class="form-list-item">
-          <input type="email" name="confirm-email" id="confirm-email" placeholder="Confrim Email" value="<%= inputData.confirmEmail %>" required/>
-        </li>
-        <li class="form-list-item">
-          <input type="password" name="password" id="password" placeholder="****" value="<%= inputData.password %>" required/>
-        </li>
-        <li class="form-list-item">
-          <input type="text" name="fullName" id="fullName" placeholder="Name" value="<%= inputData.fullName %>" required/>
-        </li>
-        <li class="form-list-item">
-          <input type="text" name="street" id="street" placeholder="street" value="<%= inputData.street %>" required/>
-        </li>
-        <li class="form-list-item">
-          <input type="text" name="postal" id="postal" placeholder="postal" maxlength="5" minlength="5" value="<%= inputData.postal %>" required/>
-        </li>
-        <li class="form-list-item">
-          <input type="text" name="city" id="city" placeholder="city" value="<%= inputData.city %>" required/>
-        </li>
-        <li class="form-list-item">
-        <button type="submit" class="form-btn">Create Account</button>
-      </li>
-      </ul>
-      <p><a href="/login">Login in</a></p>
-    </form>
+        </ul>
+        <p><a href="/login">Login in</a></p>
+      </form>
+    </section>
   </main>
 <%- include('../../shared/includes/footer') %>

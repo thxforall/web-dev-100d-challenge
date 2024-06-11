@@ -1,13 +1,15 @@
-.form-main {
-  width: 100%;
-  height: 100%;
+.logo--title {
+  width: 12rem;
+}
+
+.form-section {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-}
-.form-main h1 {
-  font-size: 3rem;
-  margin: 1rem 0;
+  background-color: rgb(58, 57, 102);
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .global-form {
@@ -16,9 +18,6 @@
   justify-content: center;
   width: 40rem;
   height: 80%;
-  background-color: rgb(58, 57, 102);
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 .global-form .form-list {
   display: flex;

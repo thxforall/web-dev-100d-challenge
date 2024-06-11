@@ -1,2 +1,15 @@
+@use 'variables';
+
 .common-btn {
+  background: none;
+  color: variables.$color-gray-50;
+  border-style: none;
+  height: 50px;
+  width: 100px;
+  border-radius: 12px;
+
+  &:hover {
+    background: variables.$color-gray-300;
+    color: variables.$color-gray-700;
+  }
 }

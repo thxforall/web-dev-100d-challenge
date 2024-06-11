@@ -1,16 +1,17 @@
 @use 'variables';
 
-.form-main {
-  width: 100%;
-  height: 100%;
+.logo--title {
+  width: 12rem;
+}
+
+.form-section {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-
-  h1 {
-    font-size: 3rem;
-    margin: 1rem 0;
-  }
+  background-color: variables.$color-indigo-500;
+  border-radius: variables.$border-radius-medium;
+  box-shadow: variables.$shadow-medium;
 }
 
 .global-form {
@@ -19,9 +20,7 @@
   justify-content: center;
   width: 40rem;
   height: 80%;
-  background-color: variables.$color-indigo-500;
-  border-radius: variables.$border-radius-medium;
-  box-shadow: variables.$shadow-medium;
+  
 
   .form-list {
     display: flex;

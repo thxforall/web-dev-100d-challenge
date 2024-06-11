@@ -1,3 +1,8 @@
-
+.auth-main {
+  display: grid;
+  min-height: 88vh;
+  grid-template-columns: 5fr 5fr;
+  gap: 5px;
+}
 
 /*# sourceMappingURL=login.css.map */
