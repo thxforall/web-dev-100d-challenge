@@ -2,8 +2,8 @@
   background: none;
   cursor: pointer;
   font: inherit;
+  color: #FF7858;
   border: 1px solid #FF9D85;
-  background-color: #FF7858;
   padding: 0.5rem 1.5rem;
   border-radius: 6px;
 }

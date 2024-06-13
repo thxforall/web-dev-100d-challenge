@@ -1,83 +1,20 @@
 @use 'variables';
 
+main {
+  margin-top: 6rem;
+}
+
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  width: inherit;
-  height: auto;
-  padding: 0 0.25rem;
-  margin: 1rem 2rem;
+  width: 100%;
+  max-width: 60rem;
+  height: 5rem;
+  padding: 0 variables.$space-6;
+  margin: 0 auto;
   font-weight: 2 00;
-
-  .header__nav {
-    display: grid;
-    grid-template-columns: 0.3fr 5fr;
-    justify-items: end;
-    width: 100%;
-
-    .nav__logo {
-      img {
-        width: 12rem;
-      }
-    }
-
-    .header__list {
-      display: flex;
-      gap: 3rem;
-      align-items: center;
-
-      .nav__item {
-        font-size: 1.5rem;
-
-        .input-box {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 15rem;
-          gap: 0.03rem;
-
-          :focus {
-            border: 3px solid rgb(153, 154, 168);
-          }
-
-          button {
-            background: inherit;
-            border: none;
-            box-shadow: none;
-            border-radius: 0;
-            padding: 0;
-            overflow: visible;
-            cursor: pointer;
-          }
-
-          svg {
-            color: variables.$color-dark-50;
-            position: relative;
-            z-index: 1;
-            width: 1.5rem;
-            right: 75px;
-          }
-
-          input {
-            position: absolute;
-            font-size: 1.5rem;
-            width: 12rem;
-            height: 3rem;
-            outline: none;
-            border: none;
-            background-color: variables.$color-dark-500;
-            border-radius: 1.3rem;
-            padding: 5px 12px 5px 40px;
-            color: inherit;
-          }
-        }
-      }
-      :last-child {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-      }
-    }
-  }
 }

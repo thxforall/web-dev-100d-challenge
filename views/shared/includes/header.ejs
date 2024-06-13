@@ -5,51 +5,16 @@
         <img src="/image/logo.png" class="logo" alt="logo">
       </a>
     </span>
-    <ul class="header__list">
-        <% if(!locals.isAuth) { %>
-        <li class="nav__item">
-          <a href="">Store</a>
-        </li>
-        <li class="nav__item">
-          <form action="" class="input-box">
-              <span>
-                <button type="submit">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-                  </svg>
-                </button>
-                </span>
-              <input type="text">
-              </button>
-          </form>
-        </li>
-        <li class="nav__item">
-          <a href="/cart">Cart</a>
-        </li>
-        <li class="nav__item">
-          <a href="/orders">Orders</a>
-        </li>
-      <% } %>
-      <% if(locals.isAdmin) { %>
-        <li class="nav__item">
-          <a href="/admin/products">Manage Products</a>
-        </li>
-        <li class="nav__item">
-          <a href="/admin/orders">Manage Orders</a>
-        </li>
-      <% } %> <% if(locals.isAuth) { %>
-      <li class="nav__item">
-        <form action="/logout" method="POST">
-          <input type="submit" value="Logout" />
-        </form>
-      </li>
-      <% } %> <% if(!locals.isAuth) { %>
-      <li class="nav__item">
-        <form action="/login" method="GET">
-          <input type="submit" class="common-btn" value="Login" />
-        </form>
-      </li>
-      <% } %>
-    </ul>
+    <%- include('nav-items') %>
   </nav>
+  <button class="mobile-menu-btn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </header>
+<aside class="mobile-menu">
+  <nav class="aside__nav">
+    <%- include('nav-items') %>
+  </nav>
+</aside>
