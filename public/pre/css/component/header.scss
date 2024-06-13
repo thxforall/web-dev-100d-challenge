@@ -51,7 +51,7 @@
           }
 
           svg {
-            color: variables.$color-gray-50;
+            color: variables.$color-dark-50;
             position: relative;
             z-index: 1;
             width: 1.5rem;
@@ -65,7 +65,7 @@
             height: 3rem;
             outline: none;
             border: none;
-            background-color: variables.$color-gray-500;
+            background-color: variables.$color-dark-500;
             border-radius: 1.3rem;
             padding: 5px 12px 5px 40px;
             color: inherit;

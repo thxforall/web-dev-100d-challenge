@@ -1,0 +1,21 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+}
+.form-section a {
+  color: #B3B3B3;
+}
+.form-section a:hover, .form-section a:active {
+  color: #FFE5E0;
+}
+
+/*# sourceMappingURL=auth.css.map */

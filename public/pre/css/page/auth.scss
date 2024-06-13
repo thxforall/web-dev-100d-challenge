@@ -1,0 +1,24 @@
+@use '../component/variables';
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: variables.$border-radius-medium;
+
+  a {
+    color: variables.$color-dark-100;
+    
+    &:hover,
+    &:active {
+      color: variables.$color-orange-50;
+    }
+  }
+}

@@ -1,14 +1,15 @@
 .common-btn {
   background: none;
-  color: rgb(153, 154, 168);
-  border-style: none;
-  height: 50px;
-  width: 100px;
-  border-radius: 12px;
+  cursor: pointer;
+  font: inherit;
+  border: 1px solid #FF9D85;
+  background-color: #FF7858;
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
 }
-.common-btn:hover {
-  background: rgb(102, 103, 124);
-  color: rgb(1, 3, 38);
+.common-btn:hover, .common-btn:active {
+  background: #FF5530;
+  color: white;
 }
 
 /*# sourceMappingURL=button.css.map */

@@ -2,16 +2,6 @@
   width: 12rem;
 }
 
-.form-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(58, 57, 102);
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
 .global-form {
   display: flex;
   flex-direction: column;
@@ -33,9 +23,10 @@
   height: 5rem;
 }
 .global-form .form-list .form-list-item input {
-  width: 80%;
+  width: 75%;
   height: 3rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  font-family: inherit;
   border-radius: 4px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }

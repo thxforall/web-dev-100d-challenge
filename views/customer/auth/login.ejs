@@ -1,14 +1,12 @@
 <%- include('../../shared/includes/head', { pageTitle : 'Login'}) %>
 <link rel="stylesheet" href="../dest/css/component/forms.css">
-<link rel="stylesheet" href="../dest/css/page/login.css" />
+<link rel="stylesheet" href="../dest/css/page/auth.css" />
 
 </head>
 <body>
   <%- include('../../shared/includes/header') %>
 
   <main class="auth-main">
-    <section class="auth__image-section">
-    </section>
     <section class="form-section">
       <img src="/image/logo.png" class="logo logo--title" alt="logo">
       <% if (inputData.errorMessage) { %>
@@ -29,8 +27,8 @@
           <button type="submit" class="common-btn form-btn">Login</button>
         </li>
         </ul>
+        </form>
         <p><a href="/signup">Create New User</a></p>
-      </form>
     </section>
   </main>
 <%- include('../../shared/includes/footer') %>

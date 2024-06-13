@@ -44,7 +44,7 @@
   cursor: pointer;
 }
 .header .header__nav .header__list .nav__item .input-box svg {
-  color: rgb(153, 154, 168);
+  color: #E6E6E6;
   position: relative;
   z-index: 1;
   width: 1.5rem;
@@ -57,7 +57,7 @@
   height: 3rem;
   outline: none;
   border: none;
-  background-color: rgb(51, 53, 81);
+  background-color: #000000;
   border-radius: 1.3rem;
   padding: 5px 12px 5px 40px;
   color: inherit;

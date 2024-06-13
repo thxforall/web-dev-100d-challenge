@@ -2,14 +2,16 @@
 
 .common-btn {
   background: none;
-  color: variables.$color-gray-50;
-  border-style: none;
-  height: 50px;
-  width: 100px;
-  border-radius: 12px;
-
-  &:hover {
-    background: variables.$color-gray-300;
-    color: variables.$color-gray-700;
+  cursor: pointer;
+  font: inherit;
+  border: 1px solid variables.$color-orange-200;
+  background-color: variables.$color-orange-300;
+  padding: variables.$space-2 variables.$space-6;
+  border-radius: variables.$border-radius-medium;
+  
+  &:hover,
+  &:active {
+    background: variables.$color-orange-400;
+    color: white;
   }
 }

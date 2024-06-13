@@ -1,6 +1,6 @@
 <%- include('../../shared/includes/head', { pageTitle : 'SignUp'}) %>
 <link rel="stylesheet" href="../dest/css/component/forms.css">
-<link rel="stylesheet" href="../dest/css/page/login.css" />
+<link rel="stylesheet" href="../dest/css/page/auth.css" />
 <link rel="stylesheet" href="../dest/css/page/signup.css" />
 
 
@@ -8,8 +8,6 @@
 <body>
   <%- include('../../shared/includes/header') %>
   <main class="auth-main">
-    <section class="auth__image-section">
-    </section>
     <section class="form-section">
       <img src="/image/logo.png" class="logo logo--title" alt="logo">
       <% if (inputData.errorMessage) { %>
@@ -33,20 +31,20 @@
             <input type="text" name="fullName" id="fullName" placeholder="Name" value="<%= inputData.fullName %>" required/>
           </li>
           <li class="form-list-item">
-            <input type="text" name="street" id="street" placeholder="street" value="<%= inputData.street %>" required/>
+            <input type="text" name="street" id="street" placeholder="Street" value="<%= inputData.street %>" required/>
           </li>
           <li class="form-list-item">
-            <input type="text" name="postal" id="postal" placeholder="postal" maxlength="5" minlength="5" value="<%= inputData.postal %>" required/>
+            <input type="text" name="postal" id="postal" placeholder="Postal" maxlength="5" minlength="5" value="<%= inputData.postal %>" required/>
           </li>
           <li class="form-list-item">
-            <input type="text" name="city" id="city" placeholder="city" value="<%= inputData.city %>" required/>
+            <input type="text" name="city" id="city" placeholder="City" value="<%= inputData.city %>" required/>
           </li>
           <li class="form-list-item">
-          <button type="submit" class="form-btn">Create Account</button>
+          <button type="submit" class="common-btn">Create Account</button>
         </li>
         </ul>
-        <p><a href="/login">Login in</a></p>
-      </form>
+        </form>
+        <p><a href="/login">Login</a></p>
     </section>
   </main>
 <%- include('../../shared/includes/footer') %>
