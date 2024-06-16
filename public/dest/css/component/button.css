@@ -1,4 +1,4 @@
-.common-btn {
+.btn--primary {
   background: none;
   cursor: pointer;
   font: inherit;
@@ -7,9 +7,15 @@
   padding: 0.5rem 1.5rem;
   border-radius: 6px;
 }
-.common-btn:hover, .common-btn:active {
+.btn--primary:hover, .btn--primary:active {
   background: #FF5530;
   color: white;
+}
+
+.btn--fill {
+  background-color: #FF3000;
+  border-color: #FF5530;
+  color: #E6E6E6;
 }
 
 /*# sourceMappingURL=button.css.map */

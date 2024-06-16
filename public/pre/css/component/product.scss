@@ -1,0 +1,36 @@
+@use 'variables.scss';
+
+.products-grid {
+  margin: variables.$space-8 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: variables.$space-4;
+}
+
+.product-item {
+  border-radius: variables.$border-radius-medium;
+  text-align: center;
+  background-color: variables.$color-dark-500;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+  }
+}
+
+.product__tiem__content {
+  padding: variables.$space-4;
+
+  h2 {
+    font-size: 1.25rem;
+    margin: variables.$space-2 0;
+  }
+
+  .product__btn__actions {
+    display: flex;
+    gap: variables.$space-2;
+    margin-top: variables.$space-4;
+  }
+}

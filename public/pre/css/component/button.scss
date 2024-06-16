@@ -1,6 +1,6 @@
 @use 'variables';
 
-.common-btn {
+.btn--primary {
   background: none;
   cursor: pointer;
   font: inherit;
@@ -15,3 +15,15 @@
     color: white;
   }
 }
+
+.btn--fill {
+  background-color: variables.$color-orange-500;
+  border-color: variables.$color-orange-400;
+  color: variables.$color-dark-50;
+}
+
+.btn--warning {
+  // border-color: variables.$color-orange-500;
+  // color: variables.$color-orange-50;
+}
+
