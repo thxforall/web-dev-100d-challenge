@@ -1,5 +1,12 @@
 @use 'variables.scss';
 
+.product-form-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .products-grid {
   margin: variables.$space-8 auto;
   display: grid;
@@ -33,4 +40,47 @@
     gap: variables.$space-2;
     margin-top: variables.$space-4;
   }
+}
+
+.product-form {
+  margin-top: variables.$space-6;
+
+  .form-list {
+    gap: variables.$space-4;
+  }
+
+  .form-list-item {
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    margin-top: variables.$space-2;
+
+    label {
+      font-size: 2rem;
+    }
+  }
+}
+
+.textarea {
+  display: flex;    
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: variables.$space-4;
+
+  label {
+    font-size: 2rem;
+  }
+
+  .description {
+    width: 75%;
+  }
+}
+
+.form-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: variables.$space-4;
+  margin-top: variables.$space-8;
 }

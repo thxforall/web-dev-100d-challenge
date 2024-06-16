@@ -1,43 +1,44 @@
-    <form action="<%= submitPath %>" method="POST" enctype="multipart/form-data">
-    <p>
-        <label for="title">Title</label>
-        <input type="text" id="title" name="title" value="<%= product.title %>" required />
-    </p>
-    <div class="image_upload_control">
-        <p>
-            <label for="image">Image</label>
+<form class="global-form product-form" action="<%= submitPath %>" method="POST" enctype="multipart/form-data">
+    <ul class="form-list">
+        <li class="form-list-item">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" value="<%= product.title %>" required />
+        </li>
+        <li class="form-list-item">
+            <div class="image_upload_control">
+                <label for="image">Image</label>
+                    <input
+                    type="file"
+                    id="image"
+                    name="image"
+                    accept="image/png, image/jpg"
+                    <% if (imageRequired) { %> required <%}%> />
+                <img src="" alt="Selected image.">
+            </div>
+        </li>
+        <li class="form-list-item">
+            <label for="summary">Summary</label>
+            <input type="text" id="summary" name="summary" maxlength="250" value="<%= product.summary %>" required />
+        </li>
+        <li class="form-list-item">
+            <label for="price">Price</label>
             <input
-            type="file"
-            id="image"
-            name="image"
-            accept="image/png, image/jpg"
-            <% if (imageRequired) { %> required <%}%>
+            type="number"
+            id="price"
+            name="price"
+            min="0.01"
+            step="0.01"
+            value="<%= product.price %>"
+            required
             />
-        </p>
-        <img src="" alt="Selected image.">
-    </div>
-    <p>
-        <label for="summary">Summary</label>
-        <input type="text" id="summary" name="summary" maxlength="250" value="<%= product.summary %>" required />
-    </p>
-    <p>
-        <label for="price">Price</label>
-        <input
-        type="number"
-        id="price"
-        name="price"
-        min="0.01"
-        step="0.01"
-        value="<%= product.price %>"
-        required
-        />
-    </p>
-    <p>
-        <label for="description">Description</label>
-        <textarea id="description" name="description" rows="7"  required><%= product.description %></textarea>
-    </p>
-    <p>
-        <button type="reset">Reset</button>
-        <button type="submit">Save</button>
-    </p>
-    </form>
+        </li>
+        <li class="textarea">
+            <label for="description">Description</label>
+            <textarea class="description" name="description" rows="7"  required><%= product.description %></textarea>
+        </li>
+        <li class="form-action">
+            <button class="btn--primary" type="reset">Reset</button>
+            <button class="btn--primary" type="submit">Save</button>
+        </li>
+    </ul>
+</form>

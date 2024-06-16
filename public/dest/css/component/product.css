@@ -1,3 +1,10 @@
+.product-form-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .products-grid {
   margin: 2rem auto;
   display: grid;
@@ -28,6 +35,44 @@
   display: flex;
   gap: 0.5rem;
   margin-top: 1rem;
+}
+
+.product-form {
+  margin-top: 1.5rem;
+}
+.product-form .form-list {
+  gap: 1rem;
+}
+.product-form .form-list-item {
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+  margin-top: 0.5rem;
+}
+.product-form .form-list-item label {
+  font-size: 2rem;
+}
+
+.textarea {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.textarea label {
+  font-size: 2rem;
+}
+.textarea .description {
+  width: 75%;
+}
+
+.form-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
 /*# sourceMappingURL=product.css.map */
