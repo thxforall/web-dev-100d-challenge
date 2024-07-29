@@ -1,9 +1,7 @@
 import express from 'express';
 
-import {
+import {} from '../controllers/product.controller';
 
-  } from '../controllers/product.controller';
-  
-  const productRouter = express.Router();
-  
-  export default productRouter;
+const productRouter = express.Router();
+
+export default productRouter;

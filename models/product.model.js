@@ -77,7 +77,7 @@ class Product {
   }
 
   remove() {
-    const productId = new ObjectId(this.id)
+    const productId = new ObjectId(this.id);
     return getDb().collection('products').deleteOne({ _id: productId });
   }
 }

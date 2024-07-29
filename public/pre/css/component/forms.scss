@@ -28,6 +28,7 @@
       gap: variables.$space-4;
       width: 100%;
       height: 5rem;
+      margin-bottom: 3rem;
 
       input {
         width: 75%;
@@ -36,6 +37,19 @@
         font-family: inherit;
         border-radius: variables.$border-radius-small;
         box-shadow: variables.$shadow-medium;
+      }
+
+      .image_upload_control {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        img {
+          display: none;
+          width: 4rem;
+          height: 4rem;
+          object-fit: cover;
+          border-radius: variables.$border-radius-small;
+        }
       }
     }
   }

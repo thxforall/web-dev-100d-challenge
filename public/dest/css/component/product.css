@@ -24,14 +24,14 @@
   object-fit: cover;
 }
 
-.product__tiem__content {
+.product__item__content {
   padding: 1rem;
 }
-.product__tiem__content h2 {
+.product__item__content h2 {
   font-size: 1.25rem;
   margin: 0.5rem 0;
 }
-.product__tiem__content .product__btn__actions {
+.product__item__content .product__btn__actions {
   display: flex;
   gap: 0.5rem;
   margin-top: 1rem;
