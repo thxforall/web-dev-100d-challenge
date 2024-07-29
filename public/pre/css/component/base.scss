@@ -210,6 +210,11 @@ a {
   color: variables.$color-orange-200;
 }
 
+.main-text {
+  font-size: 1.5rem;
+  margin-bottom: variables.$space-6;
+}
+
 .sub-title {
   font-size: 2rem;
   text-align: center;
