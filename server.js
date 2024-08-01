@@ -29,11 +29,11 @@ app.use('/products/assets', express.static('product-data'));
 app.use(express.urlencoded({ extended: false }));
 
 app.use(checkAuthStatus);
+app.use(handleErrors);
 app.use('/', globalRouter);
 app.use('/auth', authRouter);
 app.use('/admin', adminRotuer);
 app.use('/products', productRouter);
-app.use(handleErrors);
 
 connectToDatabase().catch(function (error) {
   console.log('Failed to connect to the database!');
