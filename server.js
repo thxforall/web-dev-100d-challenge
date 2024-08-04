@@ -10,6 +10,7 @@ import authRouter from './routes/auth.routes';
 import adminRotuer from './routes/admin.routes';
 import productRouter from './routes/products.routes';
 
+import { protectRotuesMiddleWare } from './middlewares/protect-routes';
 import { handleErrors } from './middlewares/error-handler';
 import { checkAuthStatus } from './middlewares/check-auth';
 
@@ -29,11 +30,13 @@ app.use('/products/assets', express.static('product-data'));
 app.use(express.urlencoded({ extended: false }));
 
 app.use(checkAuthStatus);
-app.use(handleErrors);
-app.use('/', globalRouter);
+app.use(globalRouter);
 app.use('/auth', authRouter);
-app.use('/admin', adminRotuer);
 app.use('/products', productRouter);
+
+app.use(protectRotuesMiddleWare);
+app.use('/admin', adminRotuer);
+app.use(handleErrors);
 
 connectToDatabase().catch(function (error) {
   console.log('Failed to connect to the database!');
