@@ -28,14 +28,14 @@ app.use(express.json());
 app.use(express.static('public'));
 app.use('/products/assets', express.static('product-data'));
 app.use(express.urlencoded({ extended: false }));
-
 app.use(checkAuthStatus);
-app.use(globalRouter);
-app.use('/auth', authRouter);
-app.use('/products', productRouter);
 
-app.use(protectRotuesMiddleWare);
+app.use(globalRouter);
+app.use(authRouter);
+app.use(productRouter);
+// app.use(protectRotuesMiddleWare);
 app.use('/admin', adminRotuer);
+
 app.use(handleErrors);
 
 connectToDatabase().catch(function (error) {

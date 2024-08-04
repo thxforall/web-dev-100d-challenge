@@ -1,7 +1,19 @@
 <%- include('../../shared/includes/head', { pageTitle : 'Home'}) %>
+<link rel="stylesheet" href="/dest/css/component/product.css" />
 
 </head>
     <body>
         <%- include('../../shared/includes/header') %>
-        <p>List of Products</p>
-         <%- include('../../shared/includes/footer') %>
+        <main>
+            <h1 class="main-title">List of Products</h1>
+            <section>
+                <ul class="products-grid">
+                    <% for (const product of products) { %>
+                        <li>
+                            <%- include('../../shared/includes/product-item', { product }) %>
+                        </li>
+                    <% } %>
+                </ul>
+            </section>
+        </main>
+        <%- include('../../shared/includes/footer') %>
